@@ -1,4 +1,6 @@
 Assignment 4 Part 1 - User Stories
+
+
 As a student interested in data science, I want to learn about how past data can be effectively analyzed, so that I will better understand trends and conclusions that are drawn from a set of data.
 
 As a student interested in finance, I want to learn more about the stock market, so that I can share this information with other users seeking to learn.
