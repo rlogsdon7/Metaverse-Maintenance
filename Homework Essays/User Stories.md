@@ -6,6 +6,6 @@
 
 * As a **driver** , I want to **see live diagnostic data**, so that **I can operate my vehicle in a more fuel efficient manner**.
 
-* As a **student** , I want to **learn**, so that **I will understand data**.
+* As a **fleet manager** , I want to **inspect company diagnostic data**, so that **I can manage and supervise the acquisition, utilization, maintenance, repair, and replacement of company vehicles**.
 
-* As a **student** , I want to **learn**, so that **I will understand data**.
+* As a **data analyst** , I want to **investigate diagnostic data stored from company vehicles**, so that **I can better predict efficiency of employees and vehicle breakdown**.
