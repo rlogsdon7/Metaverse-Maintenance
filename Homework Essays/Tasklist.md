@@ -7,12 +7,12 @@
 6. Implement user authentication into the web application - Ryan Logsdon
 7. Survey potential users for  feature requests that can be added to the application - Ryan Logsdon
 8. Design algorithm to place live data in three dimensional space - Ryan Logsdon
-9. Read diagnostic data from the OBD port using a microcontroller (Cory)
-10. Incorporate status LEDs to indicate power, data transmission, and errors (Cory)
-11. Determine and send data through Bluetooth or through the wired connection (Cory)
-12. Design and implement the web-based login to access authorized data (Cory)
-13. Implement a screen for the dashboard of the OBD data in the car (Cory)
-14. Source the parts for the OBD connector (Cory)
-15. Source the parts for the screen dashboard (Cory)
+9. Read diagnostic data from the OBD port using a microcontroller - Cory
+10. Incorporate status LEDs to indicate power, data transmission, and errors - Cory
+11. Determine and send data through Bluetooth or through the wired connection - Cory
+12. Design and implement the web-based login to access authorized data - Cory
+13. Implement a screen for the dashboard of the OBD data in the car - Cory
+14. Source the parts for the OBD connector - Cory
+15. Source the parts for the screen dashboard - Cory
 16. Research shared OBD port data among multiple makes and models of vehicles - All
 17. Design dashboards to display live and historical vehicle data - All
