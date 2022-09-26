@@ -10,7 +10,7 @@
 | 7 | Read diagnostic data from the OBD port using a microcontroller | 10/23/22 |  11/06/22 | First Hardware Prototype |
 | 8 | Implement Losant IOT capabilities to store vehicle attributes | 10/30/22 |  11/13/22 |  |
 | 9 | Incorporate status LEDs to indicate power, data transmission, and errors | 10/30/22 |  11/13/22 |  |
-| 10 | Determine and send data through Bluetooth or through the wired connection | 11/13/22 |  11/27/22 |  |
+| 10 | Determine and send data through Bluetooth or through the wired connection | 11/13/22 |  11/27/22 | First Software Prototype |
 | 11 | Design data base infrastructure to hold user and vehicle data | 11/20/22 |  12/11/22 |  |
 | 12 | Design dashboards to display live and historical vehicle data | 12/11/22 |  01/08/23 |  |
 | 13 | Implement user authentication into the web application | 01/08/23 |  01/15/23 | Fully Functional Software Prototype |
