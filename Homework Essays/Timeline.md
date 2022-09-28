@@ -1,4 +1,4 @@
-# Assignment 6 - Effort Matrix
+# Assignment 6 - Timeline
 | Task | Description | Start Date | End Date | Milestone |
 | --- | --- | --- | --- | --- |
 | 1 | Research modems for cellular connectivity | 10/01/22 |  10/16/22 |  |
