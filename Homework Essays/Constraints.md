@@ -1,0 +1,8 @@
+# Assignment 7 - Major Project Constraints
+## Environmental
+One major side effect of our project is an increased awareness for the efficiency of a user's vehicle. By providing a real-time user interface to display a variety of diagnostic data, a user will be more aware of how their driving habits impact different attributes. Moreover, many of these attributes give insights into environmental impacts that a vehicles emissions and performance will have. A major constraint on this project will be the ability to accurately and quickly measure such attributes to provide users with a clear understanding of vehicle performance. Thus, users will have the opportunity to understand how different driving tendencies can positively or negatively impact the environment.  
+## Ethical
+The ethical impact of this project most directly pertains to the analysis of diagnostic data from the vehicle. Due to the temperamental nature of most motor vehicle computer systems, any sub-par sensor performance can have catastrophic impacts on the vehicles performance and the safety of all passengers. Being able to safely read on-board diagnostic (OBD) data, without impacting any performance critical components of the vehicle is a major constraint of this project. If negative effects result from the use of the described system, the designers could be at fault for any related damages. Precautions that are being put in place to minimize this impact is the use of the read-only OBD II port of each vehicle. The mechanical safety constraints put in place through these components will eliminate any possibility of our software impacting the vehicle’s performance.
+## Economic
+
+## Security
