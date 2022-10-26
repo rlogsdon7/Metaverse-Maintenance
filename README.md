@@ -36,6 +36,7 @@ The purpose of this project is to design and implement a device capable of readi
 
 ## Professional Biographies
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
+- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Individual%20Capstone%20Assignment%20--%20Cory%20Gish.docx)
 
 ## Budget  
 - [Expenses](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/budget.md)
