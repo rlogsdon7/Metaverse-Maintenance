@@ -15,24 +15,24 @@ The purpose of this project is to design and implement a device capable of readi
 - [Project Description](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Project-Description.md)
 
 ## User Stories and Design Diagrams
-- [User Stories] (https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/User%20Stories.md)
-- [Design Diagrams] (https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/Design%20Diagrams.png)
-- [Diagram Description] (https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/EffortMatrix.md)
+- [User Stories](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/User%20Stories.md)
+- [Design Diagrams](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/Design%20Diagrams.png)
+- [Diagram Description](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/EffortMatrix.md)
 
 ## Project Tasks and Timeline
-- [Task List] (https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Tasklist.md)
-- [Timeline] (https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Timeline.md)
+- [Task List](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Tasklist.md)
+- [Timeline](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Timeline.md)
 - [Effort Matrix] 
 
 ## Fall Slideshow Presentation
-- [Slide Show] (https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Fall%20Slideshow%20Presentation.pdf)
+- [Slide Show](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Fall%20Slideshow%20Presentation.pdf)
 - [Presentation Vide0]
 - 
 ## Self-Assessment Essays
 - 
 
 ## Professional Biographies
-- [Ryan Logsdon] (https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
+- [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
 
 ## Budget  
 
