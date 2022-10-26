@@ -1,13 +1,21 @@
-# Assignment 6 - Timeline
-| Item | Description | Link | Price | Quantity | Total |
-| --- | --- | --- | --- | --- | --- |
-| 1 | Raspberry Pi 3 Model B | [Adafruit](https://www.adafruit.com/product/3055?src=raspberrypi) |  $35.00  |  1  | $35.00 |
-| 2 | OBD to USB Cable | [Amazon](https://www.amazon.com/VINT-TT55502-modified-Windows-ELMconfig-compatible/dp/B01N18TOFB/ref=pd_ybh_a_sccl_24/138-3074589-9575466?pd_rd_w=fI3nz&content-id=amzn1.sym.67f8cf21-ade4-4299-b433-69e404eeecf1&pf_rd_p=67f8cf21-ade4-4299-b433-69e404eeecf1&pf_rd_r=ZVSZKF7BPYBNT7ME6T6D&pd_rd_wg=P6kCC&pd_rd_r=aa09f1cf-4e89-4448-bf70-1bf0984afb0f&pd_rd_i=B01N18TOFB&psc=1) | $19.80 | 1 | $19.80 |
-| 3 | Wired Keyboard | [Walmart](https://www.walmart.com/ip/onn-USB-Computer-Keyboard-with-104-Keys-5-ft-Cable-Windows-and-Mac-compatible/409947474?athbdg=L1200) | $12.88 | 1 | $12.88 |
-| 3 | Blues Wireless Cellular Modem | [blues wireless](https://shop.blues.io/collections/development-kits/products/raspberry-pi-starter-kit) | $79.00 | 1 | $79.00 |
-| 4 | Active GPS Antenna | [Amazon](https://www.amazon.com/Bingfu-Waterproof-Navigation-Connector-Tracking/dp/B083D59N55/ref=psdc_3248676011_t1_B00LXRQY9A?th=1) | $10.99 | 1 | $10.99 |
-| 5 | Display Monitor | [Amazon](https://www.amazon.com/Monitor-Raspberry-Speakers-Display-Computer/dp/B09ZD8YS7L/ref=sr_1_1_sspa?crid=2ZSYKQS0AWXVB&keywords=8%2Binch%2Bhdmi%2Bmonitor&qid=1666709289&qu=eyJxc2MiOiI0LjM4IiwicXNhIjoiMy45OSIsInFzcCI6IjIuNzMifQ%3D%3D&refinements=p_36%3A1253504011&rnid=386442011&s=electronics&sprefix=%2Celectronics%2C641&sr=1-1-spons&th=1) | $42.99 | 1 | $42.99 |
-| 6 | Power Cable | [Amazon](https://www.amazon.com/UCEC-Splitter-Charge-Devices-Single/dp/B01713KLSY/ref=sr_1_16?crid=3B4M3WNEI59ZT&keywords=usb%2Bto%2B2%2Bmicro%2Busb%2Bcable&qid=1666709516&qu=eyJxc2MiOiIwLjY3IiwicXNhIjoiMC42NSIsInFzcCI6IjAuNzIifQ%3D%3D&sprefix=usb%2Bto%2B2%2Bmicros%2Busb%2Bcable%2Caps%2C286&sr=8-16&th=1) | $7.99 | 1 | $7.99 |
-| 7 | Power Adapter | [Amazon](https://www.amazon.com/MMNNE-Female-Supply-Extension-Adapter/dp/B082NTPPGW/ref=sr_1_4?crid=2L2M2YF2D9KTX&keywords=micro+usb+to+dc+adapter&qid=1666709578&qu=eyJxc2MiOiIzLjM5IiwicXNhIjoiMi45MCIsInFzcCI6IjIuNTQifQ%3D%3D&sprefix=micro+usb+to+dc+adapter%2Caps%2C129&sr=8-4) | $8.09 | 1 | $8.09 |
-| 8 | HDMI Cable | [Amazon](https://www.amazon.com/SinLoon-Plated-Adapter-Supports-Ethernet/dp/B01MYWAHCI/ref=sr_1_23?crid=25BMZZO70B8I5&keywords=short+hdmi+cable+.5+foot&qid=1666709647&qu=eyJxc2MiOiIyLjcyIiwicXNhIjoiMi40MSIsInFzcCI6IjIuNTAifQ%3D%3D&s=electronics&sprefix=short+hdmi+cable+.5+foo%2Celectronics%2C171&sr=1-23) | $7.59 | 1 | $7.59 |
-| Total | | | | | **$224.33** |
+# Weekly Updates
+| Week Starting Ending On: | Ryan's Tasks | Ryan's Hours| Cory's Tasks | Cory's Hours |
+| --- | --- | --- | --- | --- |
+| 8/21 | Purchased and configured Raspberry Pi. Purchased OBDII cable. Installed OBDII python libraries on PI. | 12 | | |
+| 8/28 | Tested OBDII Readings on 4 Vehichle Types. Investigated Losant IOT Software. Investigated Noda Software. Investigated W3 Spaces Web Development Tools | 20 | | |
+| 9/4 | Created Losant environment. Created User datatables, dashboards, workflows, and webhooks. | 30 | | |
+| 9/11 | Created website for hosting dashboards in VR. Connected webhooks with Losant | 20 | | |
+| 9/18 | Developed vehichle node point maps for Noda. Used Noda API to connect with Losant Dashboards. Test OBD port readings with Losant MQTT | 30 | | |
+| 9/25 | Purchased Blues Wireless Cellular Modem. Configured modem for PI. | 15 | | |
+| 10/2 | Modified python scripts in PI to live-stream OBD data via Notecard | 20 | | |
+| 10/9 | Tested prototype PI with PC Losant Dashboard. Modified python scripts | 10 | | |
+| 10/16 | Created Fall Slide Show Presentation. Documented current state of hardware, software, IOT. | 10 | | |
+| 10/23 | Enabled email notifications for new user login's and ID requests. Improved website functionalities and appearences | 14 |
+| 10/30 | Purchased GPS Active Antenna. Testing and Debugging of GPS Accuracy. Developed in-vehichle GUI. | 16 | | |
+| 11/6 |
+| 11/13 |
+| 11/20 |
+| 11/27 |
+| 12/4 |
+| 12/11 |
+| Total | -- | 197 | -- | |
