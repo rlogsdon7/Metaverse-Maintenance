@@ -22,7 +22,7 @@ The purpose of this project is to design and implement a device capable of readi
 ## Project Tasks and Timeline
 - [Task List](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Tasklist.md)
 - [Timeline](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Timeline.md)
-- [Effort Matrix] 
+- [Effort Matrix](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/EffortMatrix.md)
 
 ## Fall Slideshow Presentation
 - [Slide Show](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Fall%20Slideshow%20Presentation.pdf)
