@@ -1,0 +1,1576 @@
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://noda.io/api/includes/noda.js"></script>
+
+    <title>Metaverse Maintenance</title>
+
+    <script>
+        //Create lists and arrays to store node values
+        var uuids = [];
+        var nodeList = {};
+        var linkList = {};
+        var user = "";
+        var statusElement;
+        var statusMessageElement;
+        var timeoutID;
+        var carDictionary = [{Model:'RDX',Type:'SUV',Make:'Acura'},
+                            {Model:'MDX',Type:'SUV',Make:'Acura'},
+                            {Model:'TLX',Type:'Car',Make:'Acura'},
+                            {Model:'ILX',Type:'Car',Make:'Acura'},
+                            {Model:'Integra',Type:'Car',Make:'Acura'},
+                            {Model:'NSX',Type:'Car',Make:'Acura'},
+                            {Model:'Stelvio',Type:'SUV',Make:'Alfa Romeo'},
+                            {Model:'Giulia',Type:'Car',Make:'Alfa Romeo'},
+                            {Model:'Tonale',Type:'SUV',Make:'Alfa Romeo'},
+                            {Model:'DBX',Type:'SUV',Make:'Aston Martin'},
+                            {Model:'Vantage',Type:'Car',Make:'Aston Martin'},
+                            {Model:'DB11',Type:'Car',Make:'Aston Martin'},
+                            {Model:'DBS',Type:'Car',Make:'Aston Martin'},
+                            {Model:'DBS Superleggera',Type:'Car',Make:'Aston Martin'},
+                            {Model:'Q5',Type:'SUV',Make:'Audi'},
+                            {Model:'Q5 Sportback',Type:'SUV',Make:'Audi'},
+                            {Model:'A7',Type:'Car',Make:'Audi'},
+                            {Model:'A3',Type:'Car',Make:'Audi'},
+                            {Model:'Q3',Type:'SUV',Make:'Audi'},
+                            {Model:'A5',Type:'Car',Make:'Audi'},
+                            {Model:'Q7',Type:'Car',Make:'Audi'},
+                            {Model:'A4',Type:'Car',Make:'Audi'},
+                            {Model:'A4 allroad',Type:'SUV',Make:'Audi'},
+                            {Model:'A6',Type:'Car',Make:'Audi'},
+                            {Model:'A8',Type:'Car',Make:'Audi'},
+                            {Model:'A6 allroad',Type:'SUV',Make:'Audi'},
+                            {Model:'Q8',Type:'SUV',Make:'Audi'},
+                            {Model:'TT',Type:'Car',Make:'Audi'},
+                            {Model:'e-tron',Type:'SUV',Make:'Audi'},
+                            {Model:'S8',Type:'Car',Make:'Audi'},
+                            {Model:'R8',Type:'Car',Make:'Audi'},
+                            {Model:'S3',Type:'SUV',Make:'Audi'},
+                            {Model:'S4',Type:'Car',Make:'Audi'},
+                            {Model:'S5',Type:'Car',Make:'Audi'},
+                            {Model:'SQ5',Type:'SUV',Make:'Audi'},
+                            {Model:'SQ5 Sportback',Type:'SUV',Make:'Audi'},
+                            {Model:'e-tron Sportback',Type:'SUV',Make:'Audi'},
+                            {Model:'S6',Type:'Car',Make:'Audi'},
+                            {Model:'RS 5',Type:'Car',Make:'Audi'},
+                            {Model:'S7',Type:'Car',Make:'Audi'},
+                            {Model:'e-tron S',Type:'SUV',Make:'Audi'},
+                            {Model:'SQ7',Type:'SUV',Make:'Audi'},
+                            {Model:'e-tron S Sportback',Type:'SUV',Make:'Audi'},
+                            {Model:'SQ8',Type:'SUV',Make:'Audi'},
+                            {Model:'e-tron GT',Type:'SUV',Make:'Audi'},
+                            {Model:'RS 6',Type:'SUV',Make:'Audi'},
+                            {Model:'RS 7',Type:'SUV',Make:'Audi'},
+                            {Model:'RS Q8',Type:'SUV',Make:'Audi'},
+                            {Model:'RS e-tron GT',Type:'SUV',Make:'Audi'},
+                            {Model:'Q4 e-tron',Type:'SUV',Make:'Audi'},
+                            {Model:'Q4 Sportback e-tron',Type:'SUV',Make:'Audi'},
+                            {Model:'RS 3',Type:'SUV',Make:'Audi'},
+                            {Model:'Bentayga',Type:'SUV',Make:'Bentley'},
+                            {Model:'Flying Spur',Type:'Car',Make:'Bentley'},
+                            {Model:'Continental GT',Type:'Car',Make:'Bentley'},
+                            {Model:'X5',Type:'SUV',Make:'BMW'},
+                            {Model:'7 Series',Type:'Car',Make:'BMW'},
+                            {Model:'5 Series',Type:'Car',Make:'BMW'},
+                            {Model:'2 Series',Type:'Car',Make:'BMW'},
+                            {Model:'iX',Type:'SUV',Make:'BMW'},
+                            {Model:'X1',Type:'SUV',Make:'BMW'},
+                            {Model:'X2',Type:'SUV',Make:'BMW'},
+                            {Model:'i4',Type:'Car',Make:'BMW'},
+                            {Model:'X7',Type:'SUV',Make:'BMW'},
+                            {Model:'X3',Type:'SUV',Make:'BMW'},
+                            {Model:'4 Series',Type:'Car',Make:'BMW'},
+                            {Model:'Z4',Type:'Car',Make:'BMW'},
+                            {Model:'8 Series',Type:'Car',Make:'BMW'},
+                            {Model:'i3',Type:'SUV',Make:'BMW'},
+                            {Model:'3 Series',Type:'Car',Make:'BMW'},
+                            {Model:'X6',Type:'Car',Make:'BMW'},
+                            {Model:'X4',Type:'Car',Make:'BMW'},
+                            {Model:'i7',Type:'Car',Make:'BMW'},
+                            {Model:'M3',Type:'Car',Make:'BMW'},
+                            {Model:'M8',Type:'Car',Make:'BMW'},
+                            {Model:'X3 M',Type:'SUV',Make:'BMW'},
+                            {Model:'M4',Type:'Car',Make:'BMW'},
+                            {Model:'X4 M',Type:'SUV',Make:'BMW'},
+                            {Model:'M5',Type:'Car',Make:'BMW'},
+                            {Model:'X5 M',Type:'SUV',Make:'BMW'},
+                            {Model:'X6 M',Type:'SUV',Make:'BMW'},
+                            {Model:'M2',Type:'Car',Make:'BMW'},
+                            {Model:'Enclave',Type:'SUV',Make:'Buick'},
+                            {Model:'Encore GX',Type:'SUV',Make:'Buick'},
+                            {Model:'Encore',Type:'SUV',Make:'Buick'},
+                            {Model:'Envision',Type:'SUV',Make:'Buick'},
+                            {Model:'Escalade',Type:'SUV',Make:'Cadillac'},
+                            {Model:'CT5',Type:'Car',Make:'Cadillac'},
+                            {Model:'XT4',Type:'SUV',Make:'Cadillac'},
+                            {Model:'XT5',Type:'SUV',Make:'Cadillac'},
+                            {Model:'CT4',Type:'Car',Make:'Cadillac'},
+                            {Model:'XT6',Type:'SUV',Make:'Cadillac'},
+                            {Model:'Celestiq',Type:'Car',Make:'Cadillac'},
+                            {Model:'Escalade ESV',Type:'SUV',Make:'Cadillac'},
+                            {Model:'LYRIQ',Type:'SUV',Make:'Cadillac'},
+                            {Model:'Corvette',Type:'Car',Make:'Chevrolet'},
+                            {Model:'Tahoe',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Bolt EV',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Bolt EUV',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Suburban',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Silverado 1500 Crew Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Silverado 3500 HD Regular Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Trailblazer',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Silverado 1500 Regular Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Silverado 1500 Double Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Silverado 1500 Limited Crew Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Silverado 2500 HD Double Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Silverado 2500 HD Crew Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Equinox',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Silverado 2500 HD Regular Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Silverado 3500 HD Crew Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Traverse',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Camaro',Type:'Car',Make:'Chevrolet'},
+                            {Model:'Colorado Extended Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Colorado Crew Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Blazer',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Malibu',Type:'Car',Make:'Chevrolet'},
+                            {Model:'Spark',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Trax',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Silverado EV',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Equinox EV',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Blazer EV',Type:'SUV',Make:'Chevrolet'},
+                            {Model:'Silverado 1500 Limited Regular Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Express 2500 Cargo',Type:'Van',Make:'Chevrolet'},
+                            {Model:'Silverado 1500 Limited Double Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Express 3500 Cargo',Type:'Van',Make:'Chevrolet'},
+                            {Model:'Express 2500 Passenger',Type:'Van',Make:'Chevrolet'},
+                            {Model:'Express 3500 Passenger',Type:'Van',Make:'Chevrolet'},
+                            {Model:'Silverado 3500 HD Double Cab',Type:'Truck',Make:'Chevrolet'},
+                            {Model:'Pacifica',Type:'Van',Make:'Chrysler'},
+                            {Model:'Pacifica Hybrid',Type:'Van',Make:'Chrysler'},
+                            {Model:'300',Type:'Car',Make:'Chrysler'},
+                            {Model:'Voyager',Type:'Van',Make:'Chrysler'},
+                            {Model:'Charger',Type:'Car',Make:'Dodge'},
+                            {Model:'Challenger',Type:'Car',Make:'Dodge'},
+                            {Model:'Durango',Type:'SUV',Make:'Dodge'},
+                            {Model:'Roma',Type:'Car',Make:'Ferrari'},
+                            {Model:'Portofino',Type:'Car',Make:'Ferrari'},
+                            {Model:'F8',Type:'Car',Make:'Ferrari'},
+                            {Model:'296 GTB',Type:'Car',Make:'Ferrari'},
+                            {Model:'812 GTS',Type:'Car',Make:'Ferrari'},
+                            {Model:'SF90',Type:'Car',Make:'Ferrari'},
+                            {Model:'812 Competizione',Type:'Car',Make:'Ferrari'},
+                            {Model:'812 Competizione A',Type:'Car',Make:'Ferrari'},
+                            {Model:'488 Pista',Type:'Car',Make:'Ferrari'},
+                            {Model:'812 Superfast',Type:'Car',Make:'Ferrari'},
+                            {Model:'500X',Type:'SUV',Make:'FIAT'},
+                            {Model:'Expedition',Type:'SUV',Make:'Ford'},
+                            {Model:'F150 Lightning',Type:'Truck',Make:'Ford'},
+                            {Model:'F150 SuperCrew Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'F150 Regular Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'F150 Super Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'F250 Super Duty Crew Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'Mustang MACH-E',Type:'Car',Make:'Ford'},
+                            {Model:'Bronco Sport',Type:'SUV',Make:'Ford'},
+                            {Model:'F350 Super Duty Crew Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'Maverick',Type:'Truck',Make:'Ford'},
+                            {Model:'Mustang',Type:'Car',Make:'Ford'},
+                            {Model:'Ranger SuperCab',Type:'Truck',Make:'Ford'},
+                            {Model:'Ranger SuperCrew',Type:'Truck',Make:'Ford'},
+                            {Model:'Bronco',Type:'SUV',Make:'Ford'},
+                            {Model:'Escape',Type:'SUV',Make:'Ford'},
+                            {Model:'Explorer',Type:'SUV',Make:'Ford'},
+                            {Model:'Edge',Type:'SUV',Make:'Ford'},
+                            {Model:'EcoSport',Type:'SUV',Make:'Ford'},
+                            {Model:'E-Transit 350 Cargo Van',Type:'Van',Make:'Ford'},
+                            {Model:'Transit Connect Cargo Van',Type:'Van',Make:'Ford'},
+                            {Model:'Transit Connect Passenger Wagon',Type:'Van',Make:'Ford'},
+                            {Model:'F250 Super Duty Regular Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'Escape Plug-in Hybrid',Type:'SUV',Make:'Ford'},
+                            {Model:'Transit 150 Cargo Van',Type:'Van',Make:'Ford'},
+                            {Model:'F250 Super Duty Super Cab',Type:'Car',Make:'Ford'},
+                            {Model:'Transit 250 Cargo Van',Type:'Van',Make:'Ford'},
+                            {Model:'Transit 150 Crew Van',Type:'Van',Make:'Ford'},
+                            {Model:'Transit 350 Cargo Van',Type:'Van',Make:'Ford'},
+                            {Model:'F350 Super Duty Regular Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'Transit 250 Crew Van',Type:'Van',Make:'Ford'},
+                            {Model:'Transit 350 Crew Van',Type:'Van',Make:'Ford'},
+                            {Model:'F350 Super Duty Super Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'Transit 150 Passenger Van',Type:'Van',Make:'Ford'},
+                            {Model:'Transit 350 Passenger Van',Type:'Van',Make:'Ford'},
+                            {Model:'Transit 350 HD Cargo Van',Type:'Van',Make:'Ford'},
+                            {Model:'Transit 350 HD Crew Van',Type:'Van',Make:'Ford'},
+                            {Model:'F450 Super Duty Regular Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'F450 Super Duty Crew Cab',Type:'Truck',Make:'Ford'},
+                            {Model:'Expedition MAX',Type:'SUV',Make:'Ford'},
+                            {Model:'Sprinter 1500 Cargo',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 2500 Cargo',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 2500 Crew',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 1500 Passenger',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 3500 Cargo',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 2500 Passenger',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 3500XD Cargo',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 3500 Crew',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 4500 Cargo',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 3500 XD Crew',Type:'Van',Make:'Freightliner'},
+                            {Model:'Sprinter 4500 Crew',Type:'Van',Make:'Freightliner'},
+                            {Model:'GV70',Type:'SUV',Make:'Genesis'},
+                            {Model:'GV80',Type:'SUV',Make:'Genesis'},
+                            {Model:'G90',Type:'SUV',Make:'Genesis'},
+                            {Model:'G80',Type:'SUV',Make:'Genesis'},
+                            {Model:'Electrified G80',Type:'SUV',Make:'Genesis'},
+                            {Model:'G70',Type:'SUV',Make:'Genesis'},
+                            {Model:'GV60',Type:'SUV',Make:'Genesis'},
+                            {Model:'Yukon',Type:'SUV',Make:'GMC'},
+                            {Model:'Yukon XL',Type:'SUV',Make:'GMC'},
+                            {Model:'Sierra 1500 Double Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 1500 Regular Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 1500 Crew Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 3500 HD Regular Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Canyon Extended Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Canyon Crew Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 1500 Limited Crew Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 2500 HD Double Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Hummer EV',Type:'SUV',Make:'GMC'},
+                            {Model:'Terrain',Type:'SUV',Make:'GMC'},
+                            {Model:'Sierra 2500 HD Crew Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 3500 HD Crew Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Acadia',Type:'SUV',Make:'GMC'},
+                            {Model:'Hummer EV SUV',Type:'SUV',Make:'GMC'},
+                            {Model:'Sierra 2500 HD Regular Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 1500 Limited Regular Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Savana 2500 Cargo',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 1500 Limited Double Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Savana 3500 Cargo',Type:'Truck',Make:'GMC'},
+                            {Model:'Savana 2500 Passenger',Type:'Truck',Make:'GMC'},
+                            {Model:'Savana 3500 Passenger',Type:'Truck',Make:'GMC'},
+                            {Model:'Sierra 3500 HD Double Cab',Type:'Truck',Make:'GMC'},
+                            {Model:'Civic',Type:'Car',Make:'Honda'},
+                            {Model:'HR-V',Type:'Car',Make:'Honda'},
+                            {Model:'Accord',Type:'Car',Make:'Honda'},
+                            {Model:'CR-V',Type:'Car',Make:'Honda'},
+                            {Model:'Accord Hybrid',Type:'Car',Make:'Honda'},
+                            {Model:'CR-V Hybrid',Type:'Car',Make:'Honda'},
+                            {Model:'Odyssey',Type:'Van',Make:'Honda'},
+                            {Model:'Clarity Plug-in Hybrid',Type:'Car',Make:'Honda'},
+                            {Model:'Pilot',Type:'Car',Make:'Honda'},
+                            {Model:'Ridgeline',Type:'Truck',Make:'Honda'},
+                            {Model:'Passport',Type:'SUV',Make:'Honda'},
+                            {Model:'Insight',Type:'Car',Make:'Honda'},
+                            {Model:'Prologue',Type:'Car',Make:'Honda'},
+                            {Model:'Civic Type R',Type:'Car',Make:'Honda'},
+                            {Model:'Clarity Fuel Cell',Type:'Car',Make:'Honda'},
+                            {Model:'Elantra',Type:'Car',Make:'Hyundai'},
+                            {Model:'Santa Fe Plug-in Hybrid',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Santa Fe',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Santa Fe Hybrid',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Elantra Hybrid',Type:'Car',Make:'Hyundai'},
+                            {Model:'Palisade',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Tucson',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Tucson Hybrid',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Tucson Plug-in Hybrid',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Sonata',Type:'Car',Make:'Hyundai'},
+                            {Model:'IONIQ 5',Type:'Car',Make:'Hyundai'},
+                            {Model:'Accent',Type:'Car',Make:'Hyundai'},
+                            {Model:'Sonata Hybrid',Type:'Car',Make:'Hyundai'},
+                            {Model:'Venue',Type:'IONIQ',Make:'Hyundai'},
+                            {Model:'Ioniq Hybrid',Type:'Car',Make:'Hyundai'},
+                            {Model:'Ioniq Plug-in Hybrid',Type:'Car',Make:'Hyundai'},
+                            {Model:'Santa Cruz',Type:'Truck',Make:'Hyundai'},
+                            {Model:'Kona',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Kona Electric',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Veloster',Type:'SUV',Make:'Hyundai'},
+                            {Model:'NEXO',Type:'SUV',Make:'Hyundai'},
+                            {Model:'IONIQ 6',Type:'Car',Make:'Hyundai'},
+                            {Model:'Elantra N',Type:'Car',Make:'Hyundai'},
+                            {Model:'Kona N',Type:'SUV',Make:'Hyundai'},
+                            {Model:'Ioniq Electric',Type:'Car',Make:'Hyundai'},
+                            {Model:'QX55',Type:'SUV',Make:'INFINITI'},
+                            {Model:'QX60',Type:'SUV',Make:'INFINITI'},
+                            {Model:'QX50',Type:'SUV',Make:'INFINITI'},
+                            {Model:'Q50',Type:'SUV',Make:'INFINITI'},
+                            {Model:'Q60',Type:'SUV',Make:'INFINITI'},
+                            {Model:'QX80',Type:'Car',Make:'INFINITI'},
+                            {Model:'I-PACE',Type:'SUV',Make:'Jaguar'},
+                            {Model:'F-TYPE',Type:'SUV',Make:'Jaguar'},
+                            {Model:'E-PACE',Type:'SUV',Make:'Jaguar'},
+                            {Model:'XF',Type:'Car',Make:'Jaguar'},
+                            {Model:'F-PACE',Type:'SUV',Make:'Jaguar'},
+                            {Model:'Wagoneer',Type:'SUV',Make:'Jeep'},
+                            {Model:'Wagoneer L',Type:'SUV',Make:'Jeep'},
+                            {Model:'Grand Cherokee L',Type:'SUV',Make:'Jeep'},
+                            {Model:'Grand Cherokee',Type:'SUV',Make:'Jeep'},
+                            {Model:'Grand Wagoneer',Type:'SUV',Make:'Jeep'},
+                            {Model:'Grand Wagoneer L',Type:'SUV',Make:'Jeep'},
+                            {Model:'Grand Cherokee 4xe',Type:'SUV',Make:'Jeep'},
+                            {Model:'Gladiator',Type:'Truck',Make:'Jeep'},
+                            {Model:'Wrangler',Type:'SUV',Make:'Jeep'},
+                            {Model:'Wrangler Unlimited',Type:'SUV',Make:'Jeep'},
+                            {Model:'Wrangler Unlimited 4xe',Type:'SUV',Make:'Jeep'},
+                            {Model:'Compass',Type:'CompSUVass',Make:'Jeep'},
+                            {Model:'Renegade',Type:'SUV',Make:'Jeep'},
+                            {Model:'Cherokee',Type:'SUV',Make:'Jeep'},
+                            {Model:'Telluride',Type:'SUV',Make:'Kia'},
+                            {Model:'Seltos',Type:'SUV',Make:'Kia'},
+                            {Model:'Sorento',Type:'SUV',Make:'Kia'},
+                            {Model:'Sorento Plug-in Hybrid',Type:'SUV',Make:'Kia'},
+                            {Model:'Sorento Hybrid',Type:'SUV',Make:'Kia'},
+                            {Model:'Sportage Plug-in Hybrid',Type:'SUV',Make:'Kia'},
+                            {Model:'Sportage',Type:'SUV',Make:'Kia'},
+                            {Model:'Sportage Hybrid',Type:'SUV',Make:'Kia'},
+                            {Model:'K5',Type:'Car',Make:'Kia'},
+                            {Model:'EV6',Type:'SUV',Make:'Kia'},
+                            {Model:'Soul',Type:'Car',Make:'Kia'},
+                            {Model:'Carnival',Type:'Van',Make:'Kia'},
+                            {Model:'Rio',Type:'Van',Make:'Kia'},
+                            {Model:'Stinger',Type:'Car',Make:'Kia'},
+                            {Model:'Forte',Type:'Car',Make:'Kia'},
+                            {Model:'Niro',Type:'SUV',Make:'Kia'},
+                            {Model:'Niro Plug-in Hybrid',Type:'SUV',Make:'Kia'},
+                            {Model:'Niro EV',Type:'SUV',Make:'Kia'},
+                            {Model:'Sedona',Type:'Van',Make:'Kia'},
+                            {Model:'Huracan',Type:'Car',Make:'Lamborghini'},
+                            {Model:'Urus',Type:'SUV',Make:'Lamborghini'},
+                            {Model:'Aventador',Type:'Car',Make:'Lamborghini'},
+                            {Model:'Defender 90',Type:'SUV',Make:'Land Rover'},
+                            {Model:'Defender 110',Type:'SUV',Make:'Land Rover'},
+                            {Model:'Range Rover Sport',Type:'SUV',Make:'Land Rover'},
+                            {Model:'Range Rover',Type:'SUV',Make:'Land Rover'},
+                            {Model:'Range Rover Velar',Type:'SUV',Make:'Land Rover'},
+                            {Model:'Range Rover Evoque',Type:'SUV',Make:'Land Rover'},
+                            {Model:'Discovery',Type:'SUV',Make:'Land Rover'},
+                            {Model:'Discovery Sport',Type:'SUV',Make:'Land Rover'},
+                            {Model:'Defender 130',Type:'SUV',Make:'Land Rover'},
+                            {Model:'ES',Type:'Car',Make:'Lexus'},
+                            {Model:'LX',Type:'SUV',Make:'Lexus'},
+                            {Model:'RX',Type:'SUV',Make:'Lexus'},
+                            {Model:'LC',Type:'Car',Make:'Lexus'},
+                            {Model:'LS',Type:'Car',Make:'Lexus'},
+                            {Model:'NX',Type:'SUV',Make:'Lexus'},
+                            {Model:'IS',Type:'Car',Make:'Lexus'},
+                            {Model:'UX',Type:'SUV',Make:'Lexus'},
+                            {Model:'RC',Type:'Car',Make:'Lexus'},
+                            {Model:'GX',Type:'SUV',Make:'Lexus'},
+                            {Model:'RZ',Type:'SUV',Make:'Lexus'},
+                            {Model:'TX',Type:'SUV',Make:'Lexus'},
+                            {Model:'Navigator',Type:'SUV',Make:'Lincoln'},
+                            {Model:'Corsair',Type:'SUV',Make:'Lincoln'},
+                            {Model:'Aviator',Type:'SUV',Make:'Lincoln'},
+                            {Model:'Nautilus',Type:'SUV',Make:'Lincoln'},
+                            {Model:'Navigator L',Type:'SUV',Make:'Lincoln'},
+                            {Model:'Evora GT',Type:'Car',Make:'Lotus'},
+                            {Model:'Air',Type:'Car',Make:'Lucid'},
+                            {Model:'Ghibli',Type:'Car',Make:'Maserati'},
+                            {Model:'Levante',Type:'Car',Make:'Maserati'},
+                            {Model:'Grecale',Type:'SUV',Make:'Maserati'},
+                            {Model:'Quattroporte',Type:'Car',Make:'Maserati'},
+                            {Model:'MC20',Type:'Car',Make:'Maserati'},
+                            {Model:'MX-5 Miata',Type:'Car',Make:'MAZDA'},
+                            {Model:'CX-30',Type:'SUV',Make:'MAZDA'},
+                            {Model:'CX-5',Type:'SUV',Make:'MAZDA'},
+                            {Model:'CX-50',Type:'SUV',Make:'MAZDA'},
+                            {Model:'MAZDA6',Type:'Car',Make:'MAZDA'},
+                            {Model:'MAZDA3',Type:'Car',Make:'MAZDA'},
+                            {Model:'CX-3',Type:'SUV',Make:'MAZDA'},
+                            {Model:'CX-9',Type:'SUV',Make:'MAZDA'},
+                            {Model:'MX-30',Type:'SUV',Make:'MAZDA'},
+                            {Model:'CX-70',Type:'SUV',Make:'MAZDA'},
+                            {Model:'CX-90',Type:'SUV',Make:'MAZDA'},
+                            {Model:'MX-5 Miata RF',Type:'Car',Make:'MAZDA'},
+                            {Model:'GLA',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'A-Class',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'S-Class',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'C-Class',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'E-Class',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'GLC',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-EQ EQS',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'CLA',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'GLB',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'G-Class',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'GLE',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-AMG GLE Coupe',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'GLC Coupe',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'GLS',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-EQ EQE',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-EQ EQB',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-EQ EQS SUV',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-AMG SL',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'Metris Cargo',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Metris Passenger',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 2500 Cargo',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 1500 Cargo',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 2500 Crew',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 3500 Cargo',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 2500 Passenger',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 1500 Passenger',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 3500 XD Cargo',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-AMG CLA',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-AMG GLA',Type:'Car',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 3500 Crew',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 4500 Cargo',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Mercedes-AMG GLB',Type:'SUV',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 3500 XD Crew',Type:'Van',Make:'Mercedes-Benz'},
+                            {Model:'Sprinter 4500 Crew',Type: 'Van',Make:'Mercedes-Benz'},
+                            {Model:'Countryman',Type:'SUV',Make:'MINI'},
+                            {Model:'Clubman',Type:'SUV',Make:'MINI'},
+                            {Model:'Hardtop 2 Door',Type:'SUV',Make:'MINI'},
+                            {Model:'Hardtop 4 Door',Type:'SUV',Make:'MINI'},
+                            {Model:'Convertible',Type:'Car',Make:'MINI'},
+                            {Model:'Outlander',Type:'SUV',Make:'Mitsubishi'},
+                            {Model:'Outlander PHEV',Type:'SUV',Make:'Mitsubishi'},
+                            {Model:'Eclipse Cross',Type:'SUV',Make:'Mitsubishi'},
+                            {Model:'Mirage',Type:'SUV',Make:'Mitsubishi'},
+                            {Model:'Mirage G4',Type:'SUV',Make:'Mitsubishi'},
+                            {Model:'Outlander Sport',Type:'SUV',Make:'Mitsubishi'},
+                            {Model:'Rogue',Type:'SUV',Make:'Nissan'},
+                            {Model:'Versa',Type:'Car',Make:'Nissan'},
+                            {Model:'Pathfinder',Type:'SUV',Make:'Nissan'},
+                            {Model:'Sentra',Type:'Car',Make:'Nissan'},
+                            {Model:'Altima',Type:'Car',Make:'Nissan'},
+                            {Model:'Titan King Cab',Type:'Car',Make:'Nissan'},
+                            {Model:'Armada',Type:'Car',Make:'Nissan'},
+                            {Model:'Titan Crew Cab',Type:'Truck',Make:'Nissan'},
+                            {Model:'TITAN XD Crew Cab',Type:'Truck',Make:'Nissan'},
+                            {Model:'Kicks',Type:'SUV',Make:'Nissan'},
+                            {Model:'LEAF',Type:'Car',Make:'Nissan'},
+                            {Model:'Maxima',Type:'Car',Make:'Nissan'},
+                            {Model:'Rogue Sport',Type:'Car',Make:'Nissan'},
+                            {Model:'Frontier Crew Cab',Type:'Truck',Make:'Nissan'},
+                            {Model:'Frontier King Cab',Type:'Truck',Make:'Nissan'},
+                            {Model:'Murano',Type:'SUV',Make:'Nissan'},
+                            {Model:'Ariya',Type:'SUV',Make:'Nissan'},
+                            {Model:'Z',Type:'Car',Make:'Nissan'},
+                            {Model:'400Z',Type:'Car',Make:'Nissan'},
+                            {Model:'NV200',Type:'Van',Make:'Nissan'},
+                            {Model:'NV1500 Cargo',Type:'Van',Make:'Nissan'},
+                            {Model:'NV2500 HD Cargo',Type:'Van',Make:'Nissan'},
+                            {Model:'NV3500 HD Cargo',Type:'Van',Make:'Nissan'},
+                            {Model:'NV3500 HD Passenger',Type:'Van',Make:'Nissan'},
+                            {Model:'GT-R',Type:'Car',Make:'Nissan'},
+                            {Model:'2',Type:'Car',Make:'Polestar'},
+                            {Model:'5',Type:'Car',Make:'Polestar'},
+                            {Model:'1',Type:'Car',Make:'Polestar'},
+                            {Model:'718 Cayman',Type:'Car',Make:'Porsche'},
+                            {Model:'718 Boxster',Type:'Car',Make:'Porsche'},
+                            {Model:'Panamera',Type:'Car',Make:'Porsche'},
+                            {Model:'Macan',Type:'Car',Make:'Porsche'},
+                            {Model:'Cayenne',Type:'Car',Make:'Porsche'},
+                            {Model:'Cayenne Coupe',Type:'Car',Make:'Porsche'},
+                            {Model:'Taycan',Type:'Car',Make:'Porsche'},
+                            {Model:'Taycan Cross Turismo',Type:'Car',Make:'Porsche'},
+                            {Model:'718 Spyder',Type:'Car',Make:'Porsche'},
+                            {Model:'911',Type:'Car',Make:'Porsche'},
+                            {Model:'1500 Quad Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'1500 Crew Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'2500 Crew Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'2500 Regular Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'2500 Mega Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'3500 Mega Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'1500 Classic Quad Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'1500 Classic Regular Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'1500 Classic Crew Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'ProMaster City',Type:'Van',Make:'Ram'},
+                            {Model:'ProMaster Cargo Van',Type:'Van',Make:'Ram'},
+                            {Model:'ProMaster Window Van',Type:'Van',Make:'Ram'},
+                            {Model:'3500 Crew Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'3500 Regular Cab',Type:'Truck',Make:'Ram'},
+                            {Model:'R1T',Type:'Truck',Make:'Rivian'},
+                            {Model:'R1S',Type:'Truck',Make:'Rivian'},
+                            {Model:'Ghost',Type:'Car',Make:'Rolls-Royce'},
+                            {Model:'Cullinan',Type:'SUV',Make:'Rolls-Royce'},
+                            {Model:'Phantom',Type:'Car',Make:'Rolls-Royce'},
+                            {Model:'Wraith',Type:'Car',Make:'Rolls-Royce'},
+                            {Model:'Dawn',Type:'Car',Make:'Rolls-Royce'},
+                            {Model:'Outback',Type:'SUV',Make:'Subaru'},
+                            {Model:'BRZ',Type:'Car',Make:'Subaru'},
+                            {Model:'Forester',Type:'SUV',Make:'Subaru'},
+                            {Model:'Ascent',Type:'SUV',Make:'Subaru'},
+                            {Model:'Crosstrek',Type:'Car',Make:'Subaru'},
+                            {Model:'WRX',Type:'Car',Make:'Subaru'},
+                            {Model:'Legacy',Type:'Car',Make:'Subaru'},
+                            {Model:'Impreza',Type:'Car',Make:'Subaru'},
+                            {Model:'Solterra',Type:'SUV',Make:'Subaru'},
+                            {Model:'Model 3',Type:'Car',Make:'Tesla'},
+                            {Model:'Model Y',Type:'Car',Make:'Tesla'},
+                            {Model:'Model S',Type:'Car',Make:'Tesla'},
+                            {Model:'Model X',Type:'Car',Make:'Tesla'},
+                            {Model:'Cybertruck',Type:'Truck',Make:'Tesla'},
+                            {Model:'RAV4',Type:'SUV',Make:'Toyota'},
+                            {Model:'RAV4 Hybrid',Type:'SUV',Make:'Toyota'},
+                            {Model:'RAV4 Prime',Type:'SUV',Make:'Toyota'},
+                            {Model:'Sienna',Type:'Van',Make:'Toyota'},
+                            {Model:'Tacoma Access Cab',Type:'Truck',Make:'Toyota'},
+                            {Model:'Camry',Type:'Car',Make:'Toyota'},
+                            {Model:'Camry Hybrid',Type:'Car',Make:'Toyota'},
+                            {Model:'Tacoma Double Cab',Type:'Truck',Make:'Toyota'},
+                            {Model:'Prius Prime',Type:'Car',Make:'Toyota'},
+                            {Model:'Highlander',Type:'SUV',Make:'Toyota'},
+                            {Model:'Highlander Hybrid',Type:'SUV',Make:'Toyota'},
+                            {Model:'Avalon',Type:'Car',Make:'Toyota'},
+                            {Model:'Avalon Hybrid',Type:'Car',Make:'Toyota'},
+                            {Model:'Corolla',Type:'Car',Make:'Toyota'},
+                            {Model:'Venza',Type:'SUV',Make:'Toyota'},
+                            {Model:'Corolla Hybrid',Type:'Car',Make:'Toyota'},
+                            {Model:'Prius',Type:'Car',Make:'Toyota'},
+                            {Model:'86',Type:'SUV',Make:'Toyota'},
+                            {Model:'bZ4X',Type:'Car',Make:'Toyota'},
+                            {Model:'Corolla Hatchback',Type:'Car',Make:'Toyota'},
+                            {Model:'GR86',Type:'Car',Make:'Toyota'},
+                            {Model:'Corolla Cross Hybrid',Type:'Car',Make:'Toyota'},
+                            {Model:'Tundra CrewMax',Type:'Truck',Make:'Toyota'},
+                            {Model:'Tundra Double Cab',Type:'Truck',Make:'Toyota'},
+                            {Model:'Tundra Hybrid CrewMax',Type:'Truck',Make:'Toyota'},
+                            {Model:'Corolla Cross',Type:'Car',Make:'Toyota'},
+                            {Model:'GR Supra',Type:'Car',Make:'Toyota'},
+                            {Model:'C-HR',Type:'SUV',Make:'Toyota'},
+                            {Model:'Sequoia',Type:'SUV',Make:'Toyota'},
+                            {Model:'Mirai',Type:'Car',Make:'Toyota'},
+                            {Model:'Land Cruiser',Type:'SUV',Make:'Toyota'},
+                            {Model:'4Runner',Type:'SUV',Make:'Toyota'},
+                            {Model:'Crown',Type:'Car',Make:'Toyota'},
+                            {Model:'VF 8',Type:'Car',Make:'VinFast'},
+                            {Model:'VF 9',Type:'Car',Make:'VinFast'},
+                            {Model:'ID.4',Type:'SUV',Make:'Volkswagen'},
+                            {Model:'Atlas',Type:'SUV',Make:'Volkswagen'},
+                            {Model:'Arteon',Type:'Car',Make:'Volkswagen'},
+                            {Model:'Atlas Cross Sport',Type:'SUV',Make:'Volkswagen'},
+                            {Model:'Tiguan',Type:'SUV',Make:'Volkswagen'},
+                            {Model:'Taos',Type:'SUV',Make:'Volkswagen'},
+                            {Model:'Jetta',Type:'Car',Make:'Volkswagen'},
+                            {Model:'Passat',Type:'Car',Make:'Volkswagen'},
+                            {Model:'Golf GTI',Type:'SUV',Make:'Volkswagen'},
+                            {Model:'Golf',Type:'SUV',Make:'Volkswagen'},
+                            {Model:'ID.Buzz',Type:'Van',Make:'Volkswagen'},
+                            {Model:'Jetta GLI',Type:'Car',Make:'Volkswagen'},
+                            {Model:'Golf R',Type:'SUV',Make:'Volkswagen'},
+                            {Model:'XC40',Type:'SUV',Make:'Volvo'},
+                            {Model:'XC40 Recharge',Type:'SUV',Make:'Volvo'},
+                            {Model:'C40 Recharge',Type:'SUV',Make:'Volvo'},
+                            {Model:'V90',Type:'Car',Make:'Volvo'},
+                            {Model:'XC90',Type:'Car',Make:'Volvo'},
+                            {Model:'S90',Type:'Car',Make:'Volvo'},
+                            {Model:'S60',Type:'Car',Make:'Volvo'},
+                            {Model:'XC60',Type:'SUV',Make:'Volvo'},
+                            {Model:'V60',Type:'SUV',Make:'Volvo'}]
+        var carMakes = ['Acura','Alfa Romeo','Aston Martin','Audi','Bentley','BMW','Buick','Cadillac','Chevrolet',
+                        'Chrysler','Dodge','Ferrari','FIAT','Ford','Freightliner','Genesis','GMC','Honda','Hyundai','INFINITI','Jaguar','Jeep','Kia','Lamborghini','Land Rover',
+                        'Lexus','Lincoln','Lotus','Lucid','Maserati','MAZDA','Mercedes-Benz','MINI','Mitsubishi','Nissan','Polestar','Porsche',
+                        'Ram','Rivian','Rolls-Royce','Subaru','Tesla','Toyota','VinFast','Volkswagen','Volvo']
+        document.addEventListener('DOMContentLoaded', function () {
+            statusElement = document.getElementById('status');
+            statusMessageElement = document.getElementById('statusMessage');
+            eventsMessageElement0 = document.getElementById('eventsMessage0');
+            eventsMessageElement1 = document.getElementById('eventsMessage1');
+            eventsMessageElement2 = document.getElementById('eventsMessage2');
+            eventsMessageElement3 = document.getElementById('eventsMessage3');
+
+            window.noda.onNodeCreated = function (node) { 
+
+                //Get current nodes information
+                var nodeProps = {};
+                nodeProps.imageUrl = node.imageUrl
+                nodeProps.pageUrl = node.pageUrl
+                nodeProps.uuid = node.uuid
+                nodeProps.title = node.title
+                nodeProps.color = node.color
+                nodeProps.shape = node.shape
+                nodeProps.notes = node.notes
+                nodeProps.size = node.size
+                nodeProps.opacity = node.opacity;
+                nodeProps.location = {};
+                nodeProps.location.x = node.location.x
+                nodeProps.location.y = node.location.y
+                nodeProps.location.z = node.location.z
+
+                //Store off  data in the nodeList, and its uuid in the uuids array
+                nodeList[nodeProps.uuid] = nodeProps
+                uuids.push(nodeProps.uuid);
+
+                //Enable the ability to update the map
+                document.getElementById('updateMapButton').disabled = false;
+                }
+            window.noda.onNodeUpdated = function (node) {
+                //Show Title in Events Bar
+                if(node.selected) {
+                     showNodeProps(node);
+                }
+
+                //Get current nodes information
+                var nodeProps = {};
+                nodeProps.imageUrl = node.imageUrl
+                nodeProps.pageUrl = node.pageUrl
+                nodeProps.uuid = node.uuid
+                nodeProps.title = node.title
+                nodeProps.color = node.color
+                nodeProps.shape = node.shape
+                nodeProps.notes = node.notes
+                nodeProps.size = node.size
+                nodeProps.opacity = node.opacity;
+
+                //Update data in the nodeList
+                nodeList[nodeProps.uuid] = nodeProps
+
+                //Enable the ability to update the map
+                document.getElementById('updateMapButton').disabled = false;
+            }
+            window.noda.onNodeDeleted = function (node) { 
+                
+                //Do not need to delete uuid, we will just ignore it in the list
+                /*for(var item in uuids){
+                    if(uuids[item] == node.uuid){
+                        delete uuid[item];
+                    }
+                }*/
+
+                //Delete data in the nodeList
+                for(var item in nodeList){
+                    if(nodeList[item].uuid == node.uuid){
+                        delete nodeList[item];
+                    }
+                }
+                
+                //Enable the ability to update the map
+                document.getElementById('updateMapButton').disabled = false;
+            }
+
+            window.noda.onLinkCreated = function (link) { 
+
+                //Get link data
+                var linkProps = {};
+                linkProps.uuid = link.uuid;                
+                linkProps.fromUuid = link.fromUuid
+                linkProps.toUuid = link.toUuid
+                linkProps.title = link.title
+                linkProps.color = link.color
+                linkProps.shape = link.shape
+                linkProps.size = link.size
+
+                //Ensure the link is connecting 2 nodes, update data in linkList, and store off uuid
+                if(linkProps.fromUuid != null && linkProps.toUuid != null){
+                    linkList[linkProps.uuid] = linkProps;   
+                    uuids.push(linkProps.uuid);
+                    //eventMessage("Link created successfully."); 
+                }
+
+                //Enable the ability to update the map
+                document.getElementById('updateMapButton').disabled = false;
+            }
+            window.noda.onLinkUpdated = function (link) {
+
+                //Get link data
+                var linkProps = {};
+                linkProps.uuid = link.uuid;                
+                linkProps.fromUuid = link.fromUuid
+                linkProps.toUuid = link.toUuid
+                linkProps.title = link.title
+                linkProps.color = link.color
+                linkProps.shape = link.shape
+                linkProps.size = link.size
+
+                //Ensure the link is connecting 2 nodes, and update data in linkList
+                if(linkProps.fromUuid != null && linkProps.toUuid != null){
+                    linkList[linkProps.uuid] = linkProps;
+                }
+
+                //Enable the ability to update the map
+                document.getElementById('updateMapButton').disabled = false;
+            }
+            window.noda.onLinkDeleted = function (link) { 
+
+                //Do not need to delete uuid, we will just ignore it in the list
+                /*for(var item in uuids){
+                    if(uuids[item] == link.uuid){
+                        delete uuid[item];
+                    }
+                }*/
+
+                //Delete data from linkList
+                for(var item in linkList){
+                    if(linkList[item].uuid == link.uuid){
+                        delete linkList[item];
+                    }
+                }
+
+                //Enable the ability to update the map
+                document.getElementById('updateMapButton').disabled = false;
+            } 
+
+        }, false);
+
+        function statusError(message) {
+            //Error message creation
+            statusMessageElement.textContent = message;
+            statusElement.classList.add('error');
+            statusElement.classList.remove('success');
+        }
+
+        function eventMessage(message) {
+            //Event message creation
+            eventsMessageElement0.innerHTML = message + "<br/>" + eventsMessageElement0.innerHTML;
+            eventsMessageElement1.innerHTML = message + "<br/>" + eventsMessageElement1.innerHTML;
+            eventsMessageElement2.innerHTML = message + "<br/>" + eventsMessageElement2.innerHTML;
+            eventsMessageElement3.innerHTML = message + "<br/>" + eventsMessageElement3.innerHTML;
+        }
+
+        //This function constantly retrieves the device attribute data every TIME seconds
+        function constantUpdate() {
+            try {
+                //Number of seconds to retrieve data
+                var time = 5;
+
+                var select = document.getElementById('mapSelect');
+                var description = select.options[select.selectedIndex].text
+                //Call the webhook to get the updated parameters
+                var webhookResponse = updateParams(description,user);
+                webhookResponse.then((result) => {
+                    //Loop through attributes, and update title
+                    for (item in result){
+                        var nodeProps = {};
+                        nodeProps.uuid = result[item].uuid;
+                        nodeProps.title = result[item].title;
+                        nodeProps.notes = result[item].notes.replace("~~~VALUE~~~", (Math.round(result[item].value * 100) / 100) + " " + result[item].unit + " <br><br>");
+                        nodeProps.color = result[item].color;
+                        const node = window.noda.updateNode(nodeProps);
+                        console.log(nodeProps.title)
+                        console.log(nodeProps.notes)
+                    }    
+                }).catch(err=>console.log(err))
+            } 
+            catch (error) {
+            }
+
+            //Call function again
+            timeoutID = setTimeout(constantUpdate, time * 1000);
+        }
+
+        //Function to import the BOM map
+        async function importMap() {
+            try {
+                //clear any existing map
+                clearMap();
+
+                //Call webhook to get map
+                var webhookResponse = importCSV(document.getElementById('mapSelect').value);
+                webhookResponse.then((result) => {
+                    var nodeProps = {};
+                    nodeProps.title = document.getElementById('mapSelect').options[document.getElementById('mapSelect').selectedIndex].text
+                    nodeProps.size = 35
+                    nodeProps.opacity = 0
+                    nodeProps.location = {};
+                    nodeProps.location.x = 0
+                    nodeProps.location.y = 2.3
+                    nodeProps.location.z = 0
+                    nodeProps.location.x = nodeProps.location.x != NaN ? nodeProps.location.x : 0;
+                    nodeProps.location.y = nodeProps.location.y != NaN ? nodeProps.location.y : 0;
+                    nodeProps.location.z = nodeProps.location.z != NaN ? nodeProps.location.z : 0;
+                    const node0 = window.noda.createNode(nodeProps);
+                    nodeProps = {};
+                    nodeProps.title = user
+                    nodeProps.size = 35
+                    nodeProps.opacity = 0
+                    nodeProps.location = {};
+                    nodeProps.location.x = 0
+                    nodeProps.location.y = 2.8
+                    nodeProps.location.z = 0
+                    nodeProps.location.x = nodeProps.location.x != NaN ? nodeProps.location.x : 0;
+                    nodeProps.location.y = nodeProps.location.y != NaN ? nodeProps.location.y : 0;
+                    nodeProps.location.z = nodeProps.location.z != NaN ? nodeProps.location.z : 0;
+                    const node1 = window.noda.createNode(nodeProps);
+                    nodeProps = {};
+                    nodeProps.imageUrl = "https://cmitm.w3spaces.com/Logo-big.png"
+                    nodeProps.size = 200
+                    nodeProps.opacity = 0
+                    nodeProps.location = {};
+                    nodeProps.location.x = 0
+                    nodeProps.location.y = 3.5
+                    nodeProps.location.z = 0
+                    nodeProps.location.x = nodeProps.location.x != NaN ? nodeProps.location.x : -.1;
+                    nodeProps.location.y = nodeProps.location.y != NaN ? nodeProps.location.y : 0;
+                    nodeProps.location.z = nodeProps.location.z != NaN ? nodeProps.location.z : 0;
+                    const node2 = window.noda.createNode(nodeProps);;
+                    //Loop through results and create all NODES
+                    for (var i = 0; i < result.length; i++){
+                        //Create node if it has a null From/ToUuid, and it is not a device attribute
+                        if (result[i].FromUuid == null && result[i].ToUuid == null && (result[i].Notes == null ||  !result[i].Notes.startsWith("Device Attribute --"))) {
+                            nodeProps = {};
+                            nodeProps.imageUrl = result[i].ImageURL;
+                            nodeProps.pageUrl = "";
+                            nodeProps.uuid = result[i].Uuid
+                            if(result[i].title != null && result[i].title != "" && result[i].title != "Valueissub"){
+                                nodeProps.title = result[i].title
+                            }
+                            else{
+                                nodeProps.title = " ";
+                            }
+                            nodeProps.title = result[i].Title
+                            nodeProps.color = result[i].Color
+                            nodeProps.shape = result[i].Shape
+                            nodeProps.notes = result[i].Notes
+                            if(!result[i].Size){
+                                nodeProps.size = 5
+                            }
+                            else{
+                                nodeProps.size = result[i].Size
+                            }
+                            if(result[i].Opacity != null && !result[i].Opacity){
+                                nodeProps.opacity = parseFloat(result[i].Opacity)
+                            }
+                            else{
+                                nodeProps.opacity = 1
+                            }
+                            nodeProps.location = {};
+                            nodeProps.location.x = result[i].PositionX
+                            nodeProps.location.y = result[i].PositionY
+                            nodeProps.location.z = result[i].PositionZ
+                            nodeProps.location.x = nodeProps.location.x != NaN ? nodeProps.location.x : 0;
+                            nodeProps.location.y = nodeProps.location.y != NaN ? nodeProps.location.y : 0;
+                            nodeProps.location.z = nodeProps.location.z != NaN ? nodeProps.location.z : 0;
+                            const node = window.noda.createNode(nodeProps);
+                        }
+                    }
+                    //Loop through results and create all LINKS
+                    for (var i = 0; i < result.length; i++){
+                        //Create Link if it connects 2 nodes
+                        if (result[i].FromUuid != null && result[i].ToUuid != null) {
+                        
+                            var linkProps = {};
+                            linkProps.uuid = result[i].Uuid;
+                            linkProps.fromUuid = result[i].FromUuid
+                            linkProps.toUuid = result[i].ToUuid
+                            linkProps.title = result[i].Title
+                            if(result[i].Color == 0){
+                                linkProps.color = "#000000"
+                            }
+                            else{
+                                linkProps.color = result[i].Color
+                            }
+                            linkProps.shape = "Solid"
+                            if(result[i].Size == true){
+                                linkProps.size = 1
+                            }
+                            else{
+                                linkProps.size = result[i].Size
+                            }
+                            const link = window.noda.createLink(linkProps);
+                        }
+                    }
+                    //Create device attributes
+                    constantUpdate();  
+
+                    //Write the event
+                    eventMessage("Import successful!");
+
+                    //document.getElementById('RealButton').disabled = false;
+                    //document.getElementById('HistoricalButton').disabled = false;
+                }).catch(err=>console.log(err))
+
+            } catch (error) {
+            }
+        }
+
+        //Function to clear the map
+        async function clearMap() {
+            try {
+                //Clear the constant update of device attributes
+                clearTimeout(timeoutID);
+
+                //Delete all nodes and links
+                for (var item in uuids){
+                    var nodeProps = {};
+
+                    nodeProps.uuid = uuids[item];
+
+                    const node = window.noda.deleteNode(nodeProps);
+                    const link = window.noda.deleteLink(nodeProps);
+                }
+
+                //Reset all lists
+                uuids = [];
+                nodeList = {};
+                linkList = {};
+
+                //Post message
+                eventMessage("Map cleared.");
+
+                //document.getElementById('RealButton').disabled = true;
+                //document.getElementById('HistoricalButton').disabled = true;
+            }
+            catch (error) {
+            }
+        }
+
+        async function checkUserData() {
+            try {
+                //Call webhook to get all users
+                var webhookResponse = getUser();
+                webhookResponse.then((result) => {
+                        var usernameEntered = document.getElementById('username').value;
+                        var password = document.getElementById('password').value;
+                        if(password == "" || usernameEntered == ""){
+                            eventMessage("Please enter a Username and Password.")
+                        }
+                        else{
+                            thisPassword = ""
+                            for (var i = 0; i < result.length; i++){
+                                if(result[i].Username == usernameEntered){
+                                    thisPassword = result[i].Password
+                                }
+                            }
+                            if(password == thisPassword){
+                                document.getElementById('errorPass').style.display = "none";
+                                document.getElementById('loginRow').style.display = "none";
+                                document.getElementById('adminRow').style.display = "flex";
+                                document.getElementById('signUp').style.display = "none";
+                                document.getElementById('register').style.display = "none";
+                                user = usernameEntered;
+                                document.getElementById('username').value = ""
+                                document.getElementById('password').value = ""
+                                createDropDownItems();
+                            }
+                            else{
+                                document.getElementById('errorPass').style.display = "flex";
+                                eventMessage("Username or password is incorrect.")
+                            }
+                        }
+                        
+                }).catch(err=>console.log(err))
+            } 
+            catch (error) {
+            }
+        }
+        async function logout() {
+            try {
+                clearMap();
+                eventsMessageElement0.innerHTML = "";
+                eventsMessageElement1.innerHTML = "";
+                document.getElementById('username').value = "";
+                document.getElementById('password').value = "";
+                document.getElementById('loginRow').style.display = "flex";
+                document.getElementById('adminRow').style.display = "none";
+                document.getElementById('signUp').style.display = "none";
+                document.getElementById('register').style.display = "none";
+                location.reload()           
+            } 
+            catch (error) {
+            }
+        }
+        async function switchToSignup() {
+            try {
+                clearMap();
+                eventsMessageElement0.innerHTML = "";
+                eventsMessageElement1.innerHTML = "";
+                eventsMessageElement2.innerHTML = "";
+                eventsMessageElement3.innerHTML = "";
+                document.getElementById('username').value = "";
+                document.getElementById('password').value = "";
+                document.getElementById('loginRow').style.display = "none";
+                document.getElementById('adminRow').style.display = "none";
+                document.getElementById('signUp').style.display = "flex";
+                document.getElementById('register').style.display = "none";
+            } 
+            catch (error) {
+            }
+        }
+        async function backToLogin() {
+            try {
+                clearMap();
+                eventsMessageElement0.innerHTML = "";
+                eventsMessageElement1.innerHTML = "";
+                eventsMessageElement2.innerHTML = "";
+                eventsMessageElement3.innerHTML = "";
+                document.getElementById('username').value = "";
+                document.getElementById('password').value = "";
+                document.getElementById('usernameCreate').value = "";
+                document.getElementById('passwordCreate').value = "";
+                document.getElementById('email').value = "";
+                document.getElementById('confirmPasswordCreate').value = "";
+                document.getElementById('loginRow').style.display = "flex";
+                document.getElementById('adminRow').style.display = "none";
+                document.getElementById('signUp').style.display = "none";
+                document.getElementById('register').style.display = "none";
+            } 
+            catch (error) {
+            }
+        }
+        async function createUser() {
+            try {
+                var usernameEntered = document.getElementById('usernameCreate').value;
+                var password = document.getElementById('passwordCreate').value;
+                var confirmPassword = document.getElementById('confirmPasswordCreate').value;
+                var email = document.getElementById('email').value;
+                if(password != confirmPassword){
+                    eventMessage("Password's do not match.")
+                    return
+                }
+                if(usernameEntered == ""){
+                    eventMessage("Please enter a username.")
+                    return
+                }
+                if(password == ""){
+                    eventMessage("Please enter a password.")
+                    return
+                }
+                if(confirmPassword == ""){
+                    eventMessage("Please enter a password confirmation.")
+                    return
+                }
+                if(email == ""){
+                    eventMessage("Please enter an email address.")
+                    return
+                }
+                if(!validateEmail(email)){
+                    eventMessage("Email address is not valid.")
+                    return
+                }
+                var unique = true
+                //Call webhook to get all users
+                var webhookResponse = getUser();
+                webhookResponse.then(async function(result) {
+                console.log(result)
+                for (var i = 0; i < result.length; i++){
+                    if(result[i].Username == usernameEntered){
+                            eventMessage("Username taken.")
+                            unique = false
+                            i = result.length
+                        }
+                    }
+                    if(unique){
+                        createUserinLosant(usernameEntered,password,email);
+                    } 
+                }).catch(err=>console.log(err))
+            } 
+            catch (error) {
+            }
+        }
+
+        async function createUserinLosant(usernameEntered,password,email){
+            var webhookResponse = createUserLosant(usernameEntered,password,email);
+                webhookResponse.then(async function(result) {
+                    backToLogin()
+                    eventMessage("User created.")
+                }).catch(err=>console.log(err))
+        }
+        async function createDropDownItems() {
+            try {
+                //Call webhook to get all users
+                var webhookResponse = getDropDownItems(user);
+                    webhookResponse.then((result) => {
+                        var select = document.getElementById("mapSelect");
+                        while (select.lastChild) {
+                            select.removeChild(select.lastChild);
+                        }
+                        for (var i = 0; i < result.length; i++){
+                            var option = document.createElement("option");
+                            option.value = result[i].CarType;
+                            option.text = result[i].CarInfo;
+                            option.name = result[i].CarInfo;
+                            select.appendChild(option);
+                        } 
+                }).catch(err=>console.log(err))
+            } 
+            catch (error) {
+            }
+        }
+        async function registerNewVehicle() {
+            try {
+                clearMap();
+                eventsMessageElement0.innerHTML = "";
+                eventsMessageElement1.innerHTML = "";
+                eventsMessageElement2.innerHTML = "";
+                eventsMessageElement3.innerHTML = "";
+                document.getElementById('loginRow').style.display = "none";
+                document.getElementById('adminRow').style.display = "none";
+                document.getElementById('signUp').style.display = "none";
+                document.getElementById('register').style.display = "flex";
+                createMakesDropdown()
+                var select = document.getElementById("models");
+                var make = document.getElementById("makes").value;
+                while (select.lastChild) {
+                    select.removeChild(select.lastChild);
+                }
+                for (car in carDictionary){
+                    if(carDictionary[car].Make == make){
+                        var option = document.createElement("option");
+                        option.value = carDictionary[car].Type;
+                        option.text = carDictionary[car].Model;
+                        option.name = carDictionary[car].Model;
+                        select.appendChild(option);
+                    }
+                } 
+            } 
+            catch (error) {
+            }
+        }
+        async function backToAdmin() {
+            try {
+                createDropDownItems();
+                eventsMessageElement0.innerHTML = "";
+                eventsMessageElement1.innerHTML = "";
+                eventsMessageElement2.innerHTML = "";
+                eventsMessageElement3.innerHTML = "";
+                document.getElementById('loginRow').style.display = "none";
+                document.getElementById('adminRow').style.display = "flex";
+                document.getElementById('signUp').style.display = "none";
+                document.getElementById('register').style.display = "none";
+                document.getElementById('realTime').style.display = "none";
+                document.getElementById('historicalTime').style.display = "none";
+                document.getElementById('deviceID').value = ""
+            } 
+            catch (error) {
+            }
+        }
+        async function register() {
+            try {
+                var device = document.getElementById('deviceID').value;
+                if(device == ""){
+                    eventMessage("Please enter a device ID.")
+                    return
+                }
+                var year = document.getElementById('year');
+                var make = document.getElementById('makes');
+                var model = document.getElementById('models');
+                var description = year.options[year.selectedIndex].text + " " + make.options[make.selectedIndex].text + " " + model.options[model.selectedIndex].text
+                var carType = model.value
+                //Call webhook to get all users
+                var webhookResponse = registerVehicle(description,carType);
+                webhookResponse.then((result) => {
+                }).catch(err=>console.log(err))
+                createDropDownItems();
+                eventMessage("Success!")
+            } 
+            catch (error) {
+            }
+        }
+        async function removeVehicle() {
+            try {
+                var select = document.getElementById('mapSelect');
+                var description = select.options[select.selectedIndex].text
+                //Call webhook to get all users
+                var webhookResponse = deleteVehicle(description);
+                webhookResponse.then((result) => {
+                }).catch(err=>console.log(err))
+                createDropDownItems();
+                eventMessage("Vehicle Removed.")
+                createDropDownItems();
+            } 
+            catch (error) {
+            }
+        }
+        async function createMakesDropdown() {
+            try {
+                var select = document.getElementById("makes");
+                for (var i = 0; i < carMakes.length; i++){
+                    var option = document.createElement("option");
+                    option.value = carMakes[i];
+                    option.text = carMakes[i];
+                    option.name = carMakes[i];
+                    select.appendChild(option);
+                } 
+            } 
+            catch (error) {
+            }
+        }
+        async function createModelsDropdown() {
+            try {
+                var select = document.getElementById("models");
+                var make = document.getElementById("makes").value;
+                while (select.lastChild) {
+                    select.removeChild(select.lastChild);
+                }
+                for (car in carDictionary){
+                    if(carDictionary[car].Make == make){
+                        var option = document.createElement("option");
+                        option.value = carDictionary[car].Type;
+                        option.text = carDictionary[car].Model;
+                        option.name = carDictionary[car].Model;
+                        select.appendChild(option);
+                    }
+                } 
+            } 
+            catch (error) {
+            }
+        }
+
+        function showNodeProps(nodeProps) {
+            document.getElementById('nodeTitle').value = nodeProps.title;
+            if(nodeProps.title == "Air Filter" || nodeProps.title == "Oil Filter" || nodeProps.title == "Cabin Air Filter" || nodeProps.title == "Battery"){
+                document.getElementById('replacePart').disabled = false;
+            }
+            else{
+                document.getElementById('replacePart').disabled = true;
+            }
+            return nodeProps;
+        }
+        async function replacePart() {
+            try {
+                var title = document.getElementById('nodeTitle').value;
+                //Call webhook to get all users
+                var webhookResponse = replacePartCall(title);
+                webhookResponse.then((result) => {
+                }).catch(err=>console.log(err))
+                eventMessage("Part Replaced.")
+                document.getElementById('replacePart').disabled = true;
+            } 
+            catch (error) {
+            }
+        }
+        //clears messages
+        function clearMessages(){
+            eventsMessageElement0.innerHTML = "";
+            eventsMessageElement1.innerHTML = "";
+            eventsMessageElement2.innerHTML = "";
+            eventsMessageElement3.innerHTML = "";
+        }
+
+        async function displayReal() {
+            try {
+                eventsMessageElement0.innerHTML = "";
+                eventsMessageElement1.innerHTML = "";
+                eventsMessageElement2.innerHTML = "";
+                eventsMessageElement3.innerHTML = "";
+                document.getElementById("realDashTitle").innerHTML =  "Real Time Overview -- " + document.getElementById('mapSelect').options[document.getElementById('mapSelect').selectedIndex].text
+                document.getElementById("histDashTitle").innerHTML =  "Historical Overview -- " + document.getElementById('mapSelect').options[document.getElementById('mapSelect').selectedIndex].text
+                document.getElementById('loginRow').style.display = "none";
+                document.getElementById('adminRow').style.display = "none";
+                document.getElementById('signUp').style.display = "none";
+                document.getElementById('register').style.display = "none";
+                document.getElementById('realTime').style.display = "flex";
+                document.getElementById('historicalTime').style.display = "none";
+            } 
+            catch (error) {
+            }
+        }
+
+        async function displayHistorical() {
+            try {
+                eventsMessageElement0.innerHTML = "";
+                eventsMessageElement1.innerHTML = "";
+                eventsMessageElement2.innerHTML = "";
+                eventsMessageElement3.innerHTML = "";
+                document.getElementById('loginRow').style.display = "none";
+                document.getElementById('adminRow').style.display = "none";
+                document.getElementById('signUp').style.display = "none";
+                document.getElementById('register').style.display = "none";
+                document.getElementById('realTime').style.display = "none";
+                document.getElementById('historicalTime').style.display = "flex";
+            } 
+            catch (error) {
+            }
+        }
+
+        function validateEmail(inputText)
+        {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(inputText.match(mailformat))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        function requestDeviceID()
+        {
+            var year = document.getElementById('year');
+            var make = document.getElementById('makes');
+            var model = document.getElementById('models');
+            var description = year.options[year.selectedIndex].text + " " + make.options[make.selectedIndex].text + " " + model.options[model.selectedIndex].text
+            //Call webhook to get all users
+            var webhookResponse = sendEmail(description,user);
+            webhookResponse.then((result) => {
+            }).catch(err=>console.log(err))
+            eventMessage("Email sent containing DeviceID.")
+        }
+    </script>
+
+    <style>
+        h1 {font-size:medium}
+        body {padding:20px}
+        .node-form  label {display: inline-block; width: 28%}
+        .link-form  label {display: inline-block; width: 28%}
+        .status.error {background-color: rgb(241, 169, 169);}
+        .status.success {background-color: rgb(189, 235, 189);}
+        .status {margin: 15px 0; padding: 10px; background-color: bisque; height: 75px; overflow-y:auto;}
+        .status p {margin-bottom: 0;}
+        .status span {font-size: 80%; font-weight: bold;}
+        .events {margin: 15px 0; padding: 10px; background-color: blanchedalmond; height: 127px; overflow-y:auto;}
+        .events span {font-family: monospace; font-size: 85%;}
+        .crud-form { padding: 15px; background-color:aliceblue}
+        .crud-form input[type='button'] {margin-right: 10}
+
+        #nodeColor {width: 5em;}
+        #nodeShape {width: 7em;}
+        #nodeRelativeTo {width:6em;}        
+        #linkColor {width:6em;}        
+        #linkShape {width:6em;}
+
+        #nodeSelected {margin-right:100px}
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12" style="height: 85px">
+            <img src="Logo.png">
+        </div>
+    </div>
+    <!-- Login -->
+    <div class="row" id="loginRow" style="display: flex;">
+        <!-- Column for User Login Info -->
+        <div class="col-6" style="height: 400px">
+            <div class="crud-form link-form" style="height: 400px">
+                <h2>Login</h2>
+                 <p>
+                    <label for="username">Username:</label> <input id="username" type="text" size="30"/>
+                </p>
+                <p>
+                    <label for="password">Password:</label> <input id="password" type="password" size="30"/>
+                </p>
+                <!-- Map interaction buttons -->
+                <p>
+                    <h2 id="errorPass" style="color: red; font-size: medium; display: none;">Username and password are case sensitive.</h2>
+                </p>
+                <p>
+                    <input type="button" value="Login" onclick="checkUserData()" />
+                    <input type="button" value="Sign Up" onclick="switchToSignup()" />
+                </p>
+            </div>
+        </div>
+
+        <!-- Column for Events -->
+        <div class="col-6" id="loginmessage" style="height: 400px;">
+            <div class="crud-form link-form" style="height: 400px">
+                <div id="events" class="status success" style="height: 310px">
+                    <p>
+                        Status:
+                    <p> 
+                    <span id="eventsMessage0"></span>
+                    </p>
+                </div>
+                <p>
+                    <input type="button" value="Clear" onclick="clearMessages()" />               
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up -->
+    <div class="row" id="signUp" style="display: none;">
+        <!-- Column for User Login Info -->
+        <div class="col-6" style="height: 400px">
+            <div class="crud-form link-form" style="height: 400px">
+                <h2>Sign Up</h2>
+                <p>
+                    <label for="usernameCreate">Enter Username:</label> <input id="usernameCreate" type="text" size="30"/>
+                </p>
+                <p>
+                    <label for="email">Enter Email Address:</label> <input id="email" type="text" size="30"/>
+                </p>
+                <p>
+                    <label for="passwordCreate">Enter Password:</label> <input id="passwordCreate" type="text" size="30"/>
+                </p>
+                <p>
+                    <label for="confirmPasswordCreate">Confirm Password:</label> <input id="confirmPasswordCreate" type="text" size="30"/>
+                </p>
+                <!-- Map interaction buttons -->
+                <p>
+                    <input type="button" value="Back" onclick="backToLogin()" />
+                    <input type="button" value="Create Account" onclick="createUser()" />
+                </p>
+            </div>
+        </div>
+        <!-- Column for Events -->
+        <div class="col-6" id="loginmessage" style="height: 400px;">
+            <div class="crud-form link-form" style="height: 400px">
+                <div id="events" class="status success" style="height: 310px">
+                    <p>Status:
+                    <p> 
+                        <span id="eventsMessage2"></span>
+                    </p>
+                </div>
+                <p>
+                    <input type="button" value="Clear" onclick="clearMessages()" />               
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Register Vehicle -->
+    <div class="row" id="register" style="display: none;">
+        <!-- Column for User Login Info -->
+        <div class="col-6" style="height: 400px">
+            <div class="crud-form link-form" style="height: 400px">
+                <h2>Register Vehicle</h2>
+                <p>
+                    <label for="year">Year:</label>
+                    <select id="year">
+                        <option name="2023" value="2023">2023</option>
+                        <option name="2022" value="2022">2022</option>
+                        <option name="2021" value="2021">2021</option>
+                        <option name="2020" value="2020">2020</option>
+                        <option name="2019" value="2019">2019</option>
+                        <option name="2018" value="2018">2018</option>
+                        <option name="2017" value="2017">2017</option>
+                        <option name="2016" value="2016">2016</option>
+                        <option name="2015" value="2015">2015</option>
+                        <option name="2014" value="2014">2014</option>
+                        <option name="2013" value="2013">2013</option>
+                        <option name="2012" value="2012">2012</option>
+                        <option name="2011" value="2011">2011</option>
+                        <option name="2010" value="2010">2010</option>
+                        <option name="2009" value="2009">2009</option>
+                        <option name="2008" value="2008">2008</option>
+                        <option name="2007" value="2007">2007</option>
+                        <option name="2006" value="2006">2006</option>
+                        <option name="2005" value="2005">2005</option>
+                        <option name="2004" value="2004">2004</option>
+                        <option name="2003" value="2003">2003</option>
+                        <option name="2002" value="2002">2002</option>
+                        <option name="2001" value="2001">2002</option>
+                        <option name="2000" value="2000">2000</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="makes">Make:</label>
+                    <select id="makes" onclick="createModelsDropdown()">
+                    </select>
+                </p>
+                <p>
+                    <label for="models">Model:</label>
+                    <select id="models">
+                    </select>
+                </p>
+                <p>
+                    <label for="deviceID">Device ID:</label> <input id="deviceID" type="text" size="30"/>
+                </p>
+                <p>
+                    <input type="button" value="Request Device ID" onclick="requestDeviceID()" />
+                </p>
+                <!-- Map interaction buttons -->
+                <p>
+                    <input type="button" value="Register" onclick="register()" />
+                    <input type="button" value="Back" onclick="backToAdmin()" />
+                </p>
+            </div>
+        </div>
+        <!-- Column for Events -->
+        <div class="col-6" id="loginmessage" style="height: 400px;">
+            <div class="crud-form link-form" style="height: 400px">
+                <div id="events" class="status success" style="height: 310px">
+                    <p>Status:
+                    <p> 
+                        <span id="eventsMessage3"></span>
+                    </p>
+                </div>
+                <p>
+                    <input type="button" value="Clear" onclick="clearMessages()" />               
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Import -->
+    <div class="row" id="adminRow" style="display: none;">
+        <!-- Column for Map Options -->
+        <div class="col-6" style="height: 400px">
+            <div class="crud-form link-form" style="height: 400px">
+                <h2>Vehicle Overview</h2>
+                <!-- Vehichle Select dropdown -->
+                <p>
+                    <label for="mapSelect">Select Vehicle:</label>
+                    <select id="mapSelect">
+                    </select>
+                </p>
+                <p>
+                    <input type="button" value="Register Vehicle" onclick="registerNewVehicle()" /> 
+                    <input type="button" value="Remove Current Vehicle" onclick="removeVehicle()" /> 
+                </p>
+                <p>
+                    <input id="RealButton" type="button" value="Real Time Overview" onclick="displayReal()" /> 
+                    <input id="HistoricalButton" type="button" value="Historical Overview" onclick="displayHistorical()" /> 
+                </p>
+                <p>    
+                    <!--<input type="button" value="Import Model" onclick="importMap()" />
+                    <input type="button" value="Clear Model" onclick="clearMap()" />-->
+                    <input type="button" value="Logout" onclick="logout()" /> 
+                </p>
+            </div>
+        </div>
+        <!-- Column for Events -->
+        <div class="col-6" style="height: 400px">
+            <div class="crud-form link-form" style="height: 400px">
+                <div id="events" class="status success" style="height: 310px">
+                    <p>Events:<p> 
+                        <span id="eventsMessage1"></span></p>
+                </div>
+                <p>
+                    <input type="button" value="Clear" onclick="clearMessages()" />               
+                </p>
+                <!--<p>
+                    <label for="nodeTitle">Title:</label> <input id="nodeTitle" type="text" size="30" readonly/>
+                    <input id="replacePart" type="button" value="Mark as Replaced" onclick="replacePart()" disabled/>               
+                </p>-->
+            </div>
+        </div>
+    </div>
+    <!-- Real Time Dashboard -->
+    <div class="row" id="realTime" style="display: none;">
+        <div class="col-12" style="height: 1000px">
+            <div class="crud-form link-form" style="height: 1000px">
+                <h2 id="realDashTitle">Real Time Overview</h2>
+                <a class="los-widget"
+                href="https://app.losant.com/dashboards/62e6e153711200b01c92173c"
+                data-dashboard-id="62e6e153711200b01c92173c"
+                data-theme="light"
+                data-height="900px" data-width="100%"
+                data-refresh-rate="5">
+                View my Losant-powered dashboard "Real Time Overview"
+                </a>
+                <script>window.lsnt = (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0], t = window.lsnt || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://app.losant.com/scripts/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs); t._e = [];
+                t.ready = function(f) { t._e.push(f); }; return t;
+                }(document, "script", "lsnt-widgets"));</script>
+                <p>
+                    <input type="button" value="Back" onclick="backToAdmin()" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Historical Dashboard -->
+    <div class="row" id="historicalTime" style="display: none;">
+        <div class="col-12" style="height: 1000px">
+            <div class="crud-form link-form" style="height: 1000px">
+                <h2 id="histDashTitle">Historical Overview</h2>
+                <a class="los-widget"
+                href="https://app.losant.com/dashboards/62f51e5fa3bfaddbd7a77a0a"
+                data-dashboard-id="62f51e5fa3bfaddbd7a77a0a"
+                data-theme="light"
+                data-height="900px" data-width="100%"
+                data-refresh-rate="5">
+                View my Losant-powered dashboard "Historical Overview"
+                </a>
+                <script>window.lsnt = (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0], t = window.lsnt || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://app.losant.com/scripts/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs); t._e = [];
+                t.ready = function(f) { t._e.push(f); }; return t;
+                }(document, "script", "lsnt-widgets"));</script>
+                <p>
+                    <input type="button" value="Back" onclick="backToAdmin()" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Load external JavaScript -->
+    <script src="scripts.js"></script>  
+    </body>
+</html>
