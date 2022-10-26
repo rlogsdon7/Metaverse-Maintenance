@@ -1,4 +1,4 @@
-# Assignment 6 - Timeline
+# Expense Report
 | Item | Description | Link | Price | Quantity | Total |
 | --- | --- | --- | --- | --- | --- |
 | 1 | Raspberry Pi 3 Model B | [Adafruit](https://www.adafruit.com/product/3055?src=raspberrypi) |  $35.00  |  1  | $35.00 |
