@@ -46,5 +46,5 @@ The purpose of this project is to design and implement a device capable of readi
 - [Expenses](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/budget.md)
 
 ## Appendix
-
+- [Weekly Progress](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Project-Updates.md)
 
