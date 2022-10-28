@@ -29,7 +29,7 @@ This project is a data collection and analysist tool for consumer and commercial
 
 ## Fall Slideshow Presentation
 - [Slide Show](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Fall%20Slideshow%20Presentation.pdf)
-- [Presentation Video]
+- [Presentation Video](https://www.youtube.com/watch?v=u_M7c60Bc74)
 
 ## Self-Assessment Essays
 - 
