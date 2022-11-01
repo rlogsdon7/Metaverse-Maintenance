@@ -40,7 +40,7 @@ This project is a data collection and analysis tool for consumer and commercial 
 
 ## Individual Capstone Assessments
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
-- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Individual%20Capstone%20Assignment%20--%20Cory%20Gish.docx)
+- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Individual%20Capstone%20Assessment%20--%20Ryan%20Logsdon.docx)
 
 ## Budget  
 - [Expenses](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/budget.md)
