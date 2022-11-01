@@ -9,7 +9,7 @@
 - David Mackenzie | dmackenzie@ite.com
 
 ## Project Abstract
-This project is a data collection and analysist tool for consumer and commercial automotive vehicles. Users for this device include mechanics, fleet managers, data analysts, and conventional drivers.  The system will allow users to view, analyze, and improve vehicle performance through a multi-platform analysis tool including in-vehicle display, web application, and a virtual reality environment. 
+This project is a data collection and analysis tool for consumer and commercial automotive vehicles. Users for this device include mechanics, fleet managers, data analysts, and conventional drivers.  The system will allow users to view, analyze, and improve vehicle performance through a multi-platform analysis tool including in-vehicle display, web application, and a virtual reality environment. 
 
 ## Project Description
 - [Project Description](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Project-Description.md)
