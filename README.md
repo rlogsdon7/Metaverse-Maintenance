@@ -36,7 +36,7 @@ This project is a data collection and analysis tool for consumer and commercial 
 
 ## Professional Biographies
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
-- [Cory Gish](
+- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Cory%20Gish%20-%20Professional%20Biography.docx)
 
 ## Individual Capstone Assessments
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Individual%20Capstone%20Assessment%20--%20Ryan%20Logsdon.docx)
