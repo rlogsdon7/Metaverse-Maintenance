@@ -33,7 +33,7 @@ This project is a data collection and analysis tool for consumer and commercial 
 
 ## Self-Assessment Essays
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Ryan%20Logsdon.pdf)
-- [Cory Gish]
+- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Cory%20Gish.pdf)
 
 ## Professional Biographies
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
