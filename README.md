@@ -17,7 +17,7 @@ This project is a data collection and analysis tool for consumer and commercial 
 ## User Stories and Design Diagrams
 - [User Stories](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/User%20Stories.md)
 - [Design Diagrams](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/Design%20Diagrams.png)
-- [Diagram Description](
+- [Diagram Description](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/Design%20Diagram%20Description.pdf)
 
 ## Project Tasks and Timeline
 - [Task List](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Tasklist.md)
