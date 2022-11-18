@@ -12,8 +12,8 @@
 | 10/16 | Created Fall Slide Show Presentation. Documented current state of hardware, software, IOT. | 10 | Added to the Fall Slide Show Presentation. Documented two major project constraints, expected accomplishments, hardware, and the expected demo.  | 10 |
 | 10/23 | Enabled email notifications for new user login's and ID requests. Improved website functionalities and appearences | 14 | Purchased the display. Continued research into Bluetooth modules for their use with the microcontroller. | 15 |
 | 10/30 | Purchased GPS Active Antenna. Testing and Debugging of GPS Accuracy. Developed in-vehichle GUI. | 16 | Purchased the Bluetooth module. Began testing with logic for the Bluetooth module. | 17 |
-| 11/6 | Updated documentation including fall design report | 10 | | |
-| 11/13 | Updated and organized fall design review with project advisor | 2 | | |
+| 11/6 | Updated documentation including fall design report | 10 | Updated documentation and continued debugging | 10 |
+| 11/13 | Updated and organized fall design review with project advisor | 2 | Continued to test communication between microcontroller and car | 6 |
 | 11/20 |
 | 11/27 |
 | 12/4 |
