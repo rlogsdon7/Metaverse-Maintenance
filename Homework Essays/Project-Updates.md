@@ -1,5 +1,5 @@
 # Weekly Updates
-| Week Starting Ending On: | Ryan's Tasks | Ryan's Hours| Cory's Tasks | Cory's Hours |
+| Week Ending On: | Ryan's Tasks | Ryan's Hours| Cory's Tasks | Cory's Hours |
 | --- | --- | --- | --- | --- |
 | 8/21 | Purchased and configured Raspberry Pi. Purchased OBDII cable. Installed OBDII python libraries on PI. | 12 | Began researching microcontrollers, Bluetooth modules, and displays. | 10 |
 | 8/28 | Tested OBDII Readings on 4 Vehichle Types. Investigated Losant IOT Software. Investigated Noda Software. Investigated W3 Spaces Web Development Tools | 20 | Created Losant backend logic to control user authentication, page navigation, and signing out. | 30 |
@@ -17,5 +17,4 @@
 | 11/20 |
 | 11/27 |
 | 12/4 |
-| 12/11 |
 | Total | -- | 209 | -- | 190 |
