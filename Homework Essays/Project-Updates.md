@@ -14,7 +14,7 @@
 | 10/30 | Purchased GPS Active Antenna. Testing and Debugging of GPS Accuracy. Developed in-vehichle GUI. | 16 | Purchased the Bluetooth module. Began writing some starting code with logic for the Bluetooth module. | 17 |
 | 11/6 | Updated documentation including fall design report | 10 | Updated documentation and continued debugging | 10 |
 | 11/13 | Updated and organized fall design review with project advisor | 2 | Continued to test communication between microcontroller and car | 6 |
-| 11/20 | Tested HDMI GUI interface connection |10|||
-| 11/27 | Update Noda vehicle node point maps |10||
-| 12/4 |Tested user-login verification features with Losant data tables |12||
-| Total | -- | 241 | -- | 206 |
+| 11/20 | Tested HDMI GUI interface connection |10| Finished the schematic for the current version of the board. Began making the layout. | 12 |
+| 11/27 | Update Noda vehicle node point maps |10| Continued making the layout and finding parts for the 3D model. | 8 |
+| 12/4 |Tested user-login verification features with Losant data tables |12| Continued making the layout and debugging messaging structures for car communication in C++. | 10 |
+| Total | -- | 241 | -- | 236 |
