@@ -154,7 +154,7 @@ xENG.grid(row=6,column=1,pady=10,padx=50,ipady=10)
 ENGUnit=Label(root,text="%",font=("calibri light", 20, "bold"))
 ENGUnit.grid(row=7,column=1)
 
-VoltageLabel=Label(root,text="Controle Module Voltage",font=("calibri light", 35, "bold"))
+VoltageLabel=Label(root,text="Control Module Voltage",font=("calibri light", 35, "bold"))
 VoltageLabel.grid(row=5,column=2)
 VoltageHolder=Label(root,text ="          ",font=("calibri light", 100, "bold"),bg="white")
 VoltageHolder.grid(row=6,column=2,pady=10,padx=50,ipady=30)
