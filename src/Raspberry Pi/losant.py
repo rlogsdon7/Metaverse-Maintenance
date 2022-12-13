@@ -80,11 +80,11 @@ def updateAttributes():
         volt = cmd66.value.magnitude
         absLoad = cmd67.value.magnitude
     elif True:
-        engLoad = random.randrange(50,100)
-        rpm = random.randrange(1000,4000)
-        speed = random.randrange(15,65)
-        timing = random.randrange(0,100)
-        throttle = random.randrange(12,60)
+        engLoad = random.randrange(64,82)
+        rpm = random.randrange(1900,3000)
+        speed = random.randrange(55,65)
+        timing = random.randrange(10,20)
+        throttle = random.randrange(25,40)
         run = run + 3
         mil = random.randrange(0,1)
         purge = random.randrange(0,100)
