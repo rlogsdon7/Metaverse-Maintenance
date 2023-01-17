@@ -10,4 +10,4 @@ The following dashboard will be displayed:
 - B) Interactive Map buttons
 - C) Last-updated timestamp
 
-Use the "Back" button to return to the Vehicle Overview page
+Use the "Back" button to return to the Vehicle Overview page.
