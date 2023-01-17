@@ -5,7 +5,7 @@ The Metaverse Maintenance system consists of a physical car diagnostic device an
 
 ## 1. Getting Started
 - [1.1 Why use Metaverse Maintenance?](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/Why_Use_Metaverse_Maintenance%3F.md)
-- [1.2 Diagnostic Sensors & Car Specifications]()
+- [1.2 Diagnostic Sensors & Car Specifications](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/DiagnosticSensorsAndCarSpecifications.md)
 - [1.3 Data Collection and Storage]()
 - [1.4 Getting Help]()
 - [1.5 Summary]()
