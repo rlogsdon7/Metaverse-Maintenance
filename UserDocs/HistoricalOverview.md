@@ -5,7 +5,7 @@ To view historical data from a vehicle, select "Historical Overview" :
 
 
 The following dashboard will be displayed:
-![image](https://user-images.githubusercontent.com/112486258/212980605-b583dfdf-f646-476e-b4f8-afb3237bfcf8.png)
+![image](https://user-images.githubusercontent.com/112486258/212982107-974df8d9-3b04-4c4b-90ca-90968430fab5.png)
 
 - A) Title, including selected Vehicle
 - B) Interactive Map buttons
