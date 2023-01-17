@@ -18,9 +18,9 @@ The Metaverse Maintenance system consists of a physical car diagnostic device an
 ## 3. Account Set-up
 - [3.1 Sign-up](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/SignUp.md)
 - [3.2 Accessing Account](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/AccessingAccount.md)
-- [3.3 Registering Vehicles]()
-- [3.4 Deleting Vehicles]()
-- [3.5 Summary]()
+- [3.3 Registering Vehicles](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/RegisteringNewVehichles.md)
+- [3.4 Deleting Vehicles](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/DeletingVehicles.md)
+- [3.5 Summary](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/AccountSetupSummary.md)
 
 ## 4. Viewing Vehicle(s)
 - [4.1 Selecting Vehicle]()
