@@ -4,7 +4,7 @@
 The Metaverse Maintenance system consists of a physical car diagnostic device and associated web analytics tools. The device reads and displays sensor data from the vehicle via an in-car display. Web diagnostic tools, including real-time and historical dashboards, allow users to track vehicle performance remotely. An optional virtual reality data visualization tool is also provided for users possessing a VR headset.  
 
 ## 1. Getting Started
-- [1.1 Why use Metaverse Maintenance?]()
+- [1.1 Why use Metaverse Maintenance?](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/Why_Use_Metaverse_Maintenance%3F.md)
 - [1.2 Diagnostic Sensors & Car Specifications]()
 - [1.3 Data Collection and Storage]()
 - [1.4 Getting Help]()
