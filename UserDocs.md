@@ -1,50 +1,41 @@
-# Metaverse Maintenance
+# Metaverse Maintenance User Guide
 
-## Team Members
-- Ryan Logsdon | logsdori@mail.uc.edu
-- Cory Gish | gishcd@mail.uc.edu
+## System Overview
+The Metaverse Maintenance system consists of a physical car diagnostic device and associated web analytics tools. The device reads and displays sensor data from the vehicle via an in-car display. Web diagnostic tools, including real-time and historical dashboards, allow users to track vehicle performance remotely. An optional virtual reality data visualization tool is also provided for users possessing a VR headset.  
 
-## Advisor
+## 1. Getting Started
+- [1.1 Why use Metaverse Maintenance?]()
+- [1.2 Diagnostic Sensors & Car Specifications]()
+- [1.3 Data Collection and Storage]()
+- [1.4 Getting Help]()
+- [1.5 Summary]()
 
-- David Mackenzie | dmackenzie@ite.com
+## 2. Vehichle Installation
+- [2.1 Attaching OBDII Data Collector]()
+- [2.2 Powering In Car Display]()
+- [2.3 Summary]()
 
-## Project Abstract
-This project is a data collection and analysis tool for consumer and commercial automotive vehicles. Users for this device include mechanics, fleet managers, data analysts, and conventional drivers.  The system will allow users to view, analyze, and improve vehicle performance through a multi-platform analysis tool including in-vehicle display, web application, and a virtual reality environment. 
+## 3. Account Set-up
+- [3.1 Sign-up]()
+- [3.2 Accessing Account]()
+- [3.3 Registering Vehichles]()
+- [3.4 Deleting Vehichles]()
+- [3.5 Summary]()
 
-## Project Description
-- [Project Description](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Project-Description.md)
+## 4. Viewing Vehichle(s)
+- [4.1 Selecting Vehichle]()
+- [4.2 Real Time Overview]()
+- [4.3 Historical Overview]()
+- [4.4 View Fleet]()
+- [4.5 Summary]()
 
-## User Stories and Design Diagrams
-- [User Stories](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/User%20Stories.md)
-- [Design Diagrams](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/Design%20Diagrams.png)
-- [Diagram Description](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Design%20Diagrams%20%26%20User%20Stories/Design%20Diagram%20Description.pdf)
+## 5. Using VR
+- [5.1 Noda.io Setup]()
+- [5.2 Accessing Web-Browser]()
+- [5.3 Importing Map]()
+- [5.4 Viewing Vehichle(s)]()
+- [5.5 Clearing Map]()
+- [5.6 Summary]()
 
-## Project Tasks and Timeline
-- [Task List](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Tasklist.md)
-- [Timeline](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Timeline.md)
-- [Effort Matrix](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/EffortMatrix.md)
-
-## Constraints
-- [Constraints](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Constraints.md)
-
-## Fall Slideshow Presentation
-- [Slide Show](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Fall%20Slideshow%20Presentation.pdf)
-- [Presentation Video](https://www.youtube.com/watch?v=u_M7c60Bc74)
-
-## Self-Assessment Essays
-- [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Ryan%20Logsdon.pdf)
-- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Cory%20Gish.pdf)
-
-## Professional Biographies
-- [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
-- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Cory%20Gish%20-%20Professional%20Biography.docx)
-
-## Individual Capstone Assessments
-- [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Individual%20Capstone%20Assessment%20--%20Ryan%20Logsdon.docx)
-- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Individual%20Capstone%20Assignment%20--%20Cory%20Gish.docx)
-
-## Budget  
-- [Expenses](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/budget.md)
-
-## Appendix
-- [Weekly Progress](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Project-Updates.md)
+## 6. FAQ
+- [6.1 FAQ]()
