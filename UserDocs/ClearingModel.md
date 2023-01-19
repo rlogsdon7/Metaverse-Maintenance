@@ -5,3 +5,9 @@ To clear a model, simply select the "Clear Model" button from the Vehicle Overvi
 
 
 The model will be removed from the space. Now, click "Logout" to ensure the security of your account.
+
+
+
+Next: [5.8 Summary](https://github.com/rlogsdon7/Metaverse-Maintenance/tree/main/UserDocs)
+
+[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
