@@ -8,6 +8,6 @@ The model will be removed from the space. Now, click "Logout" to ensure the secu
 
 
 
-Next: [5.8 Summary](https://github.com/rlogsdon7/Metaverse-Maintenance/tree/main/UserDocs)
+Next: [5.8 Summary](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/UsingVRSummary.md)
 
 [Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
