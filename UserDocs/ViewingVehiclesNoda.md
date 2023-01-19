@@ -7,4 +7,6 @@ To view vehicle data using the web browser inside Noda, simply follow the same i
 - [4.4 View Fleet](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/ViewFleet.md)
 
 To view sensor specific data, hover over a sensor node with either controler. A notes section will appear showing the attribute value and a short description.
+
+
 ![image](https://user-images.githubusercontent.com/112486258/213474450-1fe1fc08-46ee-4160-b3e5-8b66dba371c4.png)
