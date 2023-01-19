@@ -37,7 +37,7 @@ The Metaverse Maintenance system consists of a physical car diagnostic device an
 - [5.5 Viewing Vehicle Data](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/ViewingVehiclesNoda.md)
 - [5.6 Replacing Parts](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/ReplacingParts.md)
 - [5.7 Clearing Model](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/ClearingModel.md)
-- [5.8 Summary](https://github.com/rlogsdon7/Metaverse-Maintenance/tree/main/UserDocs)
+- [5.8 Summary](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/UsingVRSummary.md)
 
 ## 6. FAQ
 - [6.1 FAQ](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/FAQ.md)
