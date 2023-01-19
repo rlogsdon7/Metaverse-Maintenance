@@ -1,6 +1,6 @@
 # 5.4 Importing Model
 
-To import a model, first, select a vehichle from the "Select Vehicle" dropdown.
+To import a model, first, select a vehicle from the "Select Vehicle" dropdown.
 ![image](https://user-images.githubusercontent.com/112486258/213470309-d578055e-3d18-47d8-8bbc-bb5949f4546c.png)
 
 Next, select "Import Model"
@@ -11,5 +11,7 @@ A vehicle node point map will then be displayed.
 
 
 
+
+Next: [5.5 Viewing Vehicle Data](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/ViewingVehiclesNoda.md)
 
 [Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
