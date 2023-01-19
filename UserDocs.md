@@ -13,7 +13,7 @@ The Metaverse Maintenance system consists of a physical car diagnostic device an
 ## 2. Vehicle Installation
 - [2.1 Attaching OBDII Data Collector]()
 - [2.2 Powering In Car Display]()
-- [2.3 Summary]()
+- [2.3 Summary](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/Vehicle%20Installation%20-%20Summary.md)
 
 ## 3. Account Set-up
 - [3.1 Sign-up](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/SignUp.md)
