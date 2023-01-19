@@ -13,3 +13,9 @@ The following dashboard will be displayed:
 - D) Toggle buttons to isolate sensor data
 
 Use the "Back" button to return to the Vehicle Overview page
+
+
+
+Next: [4.4 View Fleet](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/ViewFleet.md)
+
+[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
