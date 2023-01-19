@@ -6,7 +6,7 @@ This section has described how to set up and access the 3D VR data visualization
 First, download Noda in the App Store:
 ![image](https://user-images.githubusercontent.com/112486258/212988787-8e7c3938-40b2-46c1-842a-b9a2741a5250.png)
 
-Next, open Noda inside the headset. Noda provides a tutorial for learning how to move around the environment, as well as how to view, create, edit, update, and delete nodes and links. The documentation will continue with the assumption that a user has an understanding of how to moce around Noda.
+Next, open Noda inside the headset. Noda provides a tutorial for learning how to move around the environment, as well as how to view, create, edit, update, and delete nodes and links. The documentation will continue with the assumption that a user understands how to move around Noda.
 
 - Open Menu
   
@@ -17,3 +17,8 @@ Next, open "Account" and purchase both the one-time and monthly subscription opt
 
 
 Be sure to carefully follow these instructions to ensure optimal performance of the Metaverse Maintenance system. Once followed, you should not have to set up these settings again.
+
+
+Next: [5.2 Accessing Web-Application](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/WebBrowser.md)
+
+[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
