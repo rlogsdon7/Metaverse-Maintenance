@@ -8,10 +8,15 @@ Metaverse Maintenance is an out-of-the-box diagnostic tool that can be useful fo
 
 * As a **mechanic** , I want to **see diagnostic data on a vehicle**, so that **I will understand what components are causing problems for a client**.
 
-* As a **driver** , I want to **see live diagnostic data**, so that **I can operate my vehicle in a more fuel efficient manner**.
+* As a **driver** , I want to **see live diagnostic data**, so that **I can operate my vehicle in a more fuel-efficient manner**.
 
 * As a **fleet manager** , I want to **inspect company diagnostic data**, so that **I can manage and supervise the acquisition, utilization, maintenance, repair, and replacement of company vehicles**.
 
 * As a **data analyst** , I want to **investigate diagnostic data stored from company vehicles**, so that **I can better predict efficiency of employees and vehicle breakdown**.
 
-Overall, Metaverse Maintenance provides a variety of data visualization tools that can be utilized to assess, diagnose, and prevent automotive issues. Fleet managers have the ability to quickly assess the location and performance of vehichles across the globe. Mechanics have a better view and understanding of why vehichles are not performing efficient. Drivers operate vehichles in more efficient manners and assess the performance of their vehichle over time.
+Overall, Metaverse Maintenance provides a variety of data visualization tools that can be utilized to assess, diagnose, and prevent automotive issues. Fleet managers can quickly assess the location and performance of vehicles across the globe. Mechanics have a better view and understanding of why vehicles are not performing efficiently. Drivers operate vehicles in more efficient manners and assess the performance of their vehicle over time.
+
+
+Next: [1.2 Diagnostic Sensors & Car Specifications](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/DiagnosticSensorsAndCarSpecifications.md)
+
+[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
