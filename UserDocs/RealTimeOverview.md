@@ -11,3 +11,8 @@ The following dashboard will be displayed:
 - C) Last-updated timestamp
 
 Use the "Back" button to return to the Vehicle Overview page.
+
+
+Next: [4.3 Historical Overview](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/HistoricalOverview.md)
+
+[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
