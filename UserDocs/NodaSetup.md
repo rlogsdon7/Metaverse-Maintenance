@@ -9,10 +9,10 @@ First, download Noda in the App Store:
 Next, open Noda inside the headset. Noda provides a tutorial for learning how to move around the environment, as well as how to view, create, edit, update, and delete nodes and links. The documentation will continue with the assumption that a user has an understanding of how to moce around Noda.
 
 - Open Menu
-In order to use Metaverse Maintenance in Noda, the  FILL IN HERE and FILL IN HERE must be purchased. To purchase these, open the in-app menu using the "A" button on the right controller.
+In order to use Metaverse Maintenance in Noda, Noda Core and Noda Plus must be purchased. To purchase these, open the in-app menu using the "B" button on the right controller.
 
-Next, Open Settings:
+Next, open "Account" and purchase both the one-time and monthly subscription options. 
+![image](https://user-images.githubusercontent.com/112486258/213465066-581b2508-a88a-4a44-bce8-58723240c90a.png)
 
-Lastly, purchase both the one-time and monthly subscription options. 
 
 Be sure to carefully follow these instructions to ensure optimal performance of the Metaverse Maintenance system. Once followed, you should not have to set up these settings again.
