@@ -8,3 +8,8 @@ Next, select "Remove Current Vehicle." The vehicle will be removed from your acc
 
 If a vehicle is removed by accident, a user will have 90 days to report the mistake. After this time period, the device data will be lost and a new device ID must be created. 
 
+
+
+Next: [3.5 Summary](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/AccountSetupSummary.md)
+
+[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
