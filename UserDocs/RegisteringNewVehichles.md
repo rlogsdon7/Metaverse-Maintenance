@@ -16,3 +16,8 @@ Next, select "Register” to complete the registration.
 
 Lastly, select "Back" to return to the Vehicle Overview page. Your vehicle should now be listed in the "Select Vehicle" dropdown.
 ![image](https://user-images.githubusercontent.com/112486258/212974622-7e496ab1-a6d7-4f14-b359-5ee505141805.png)
+
+
+Next: [3.4 Deleting Vehicles](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/DeletingVehicles.md)
+
+[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
