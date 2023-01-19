@@ -12,3 +12,7 @@ Next, enter the requested information. If you will be using more than one device
 
 If all information is acceptable, a user will be created with the requested username and password. A "User Created" message will be displayed, and you will be taken back to the login page.
 ![image](https://user-images.githubusercontent.com/112486258/212971281-12890ca1-80e7-4f33-a5cb-7b20a814d8a0.png)
+
+Next: [3.2 Accessing Account](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/AccessingAccount.md)
+
+[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
