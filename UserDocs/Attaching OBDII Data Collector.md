@@ -7,10 +7,6 @@ Ensure the red LED is lit up on the OBD device.
 
 
 
-Next: [2.2 Powering In Car Display]()
-
-[Back To User Guide](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs.md)
-
 
 Next: [2.2 Powering In Car Display](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/UserDocs/Powering%20In%20Car%20Display.md)
 
