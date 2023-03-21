@@ -43,6 +43,7 @@ This project is a data collection and analysis tool for consumer and commercial 
 Initial:
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Ryan%20Logsdon.pdf)
 - [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Cory%20Gish.pdf)
+
 Final:
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Final%20Self-Assessment_Ryan%20Logsdon.pdf)
 - [Cory Gish](
