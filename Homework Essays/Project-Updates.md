@@ -37,5 +37,5 @@
 | 4/2 | Presented final project at CEAS Expo | 12 | -- | 0 |
 | 4/9 | Drafted final assessments and final design report | 10 | -- | 0 |
 | 4/16| Completed final assessments and design report, submitted all materials | 5 | -- | 0 |
-| Spring Total | -- | 127 | -- | 241 |
+| Spring Total | -- | 127 | -- | 0 |
 | Grand Total | Fall Hours: 241; Spring Hours: 127; Total Hours: 368 | 368 | -- | 0 |
