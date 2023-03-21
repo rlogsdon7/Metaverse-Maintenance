@@ -35,7 +35,8 @@ This project is a data collection and analysis tool for consumer and commercial 
 - [Presentation Video](https://www.youtube.com/watch?v=u_M7c60Bc74)
 
 ## Final Slideshow Presentation
-- [Slide Show](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Project%20Presentation.pdf)
+- [Slide Show](
+- [Presentation Video](
 - [Expo Poster](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Final%20Senior%20Design%20Poster.pdf)
 
 ## Self-Assessment Essays
