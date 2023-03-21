@@ -18,24 +18,24 @@
 | 11/27 | Update Noda vehicle node point maps |10| Continued making the layout and finding parts for the 3D model. | 8 |
 | 12/4 |Tested user-login verification features with Losant data tables |12| Continued making the layout and debugging messaging structures for car communication in C++. | 10 |
 | Fall Total | -- | 241 | -- | 236 |
-| 12/11 | -- | 0 | Created Casing Model | 5 |
-| 12/18 | -- | 0 | Printed Casing Model | 5 |
+| 12/11 | Created Casing Model | 5 | -- | 0 |
+| 12/18 | Printed Casing Model | 5 | -- | 0 |
 | 12/25 | -- | 0 | -- | 0 |
 | 1/1 | -- | 0 | -- | 0 |
-| 1/8 | -- | 0 | Presented Prototype of project at CES 2023 | 40 |
-| 1/15 | -- | 0 | Updated GPS tracking system with notecard | 3 |
-| 1/22 | -- | 0 | Enabled remote firmware updates with notecard | 4 |
-| 1/29 | -- | 0 | Tested full functionality of prototype using OBD to USB adapte | 3 |
-| 2/5 | -- | 0 | Updated Casing model for larger connection sizes | 4 |
-| 2/12 | -- | 0 | Tested improved mobile dashboard using Losant user experiences | 5 |
-| 2/19 | -- | 0 | Created custom 3D visualization components using D3 | 3 |
-| 2/26 | -- | 0 | Updated python script on raspberry pi to read any incoming OBD readings regardless of connection type | 8 |
-| 3/5 | -- | 0 | Tested updated Notecard and raspberry pi settings using Losant simulator | 5 |
-| 3/12 | -- | 0 | Recorded demo videos for CEAS Expo | 5 |
-| 3/19 | -- | 0 | Printed updated casing, installed casing on in-car display | 3 |
-| 3/26 | -- | 0 | Prepared presentation materials for CEAS Expo | 12 |
-| 4/2 | -- | 0 | Presented final project at CEAS Expo | 12 |
-| 4/9 | -- | 0 | Drafted final assessments and final design report | 10 |
-| 4/16| -- | 0 | Completed final assessments and design report, submitted all materials | 5 |
-| Spring Total | -- | 241 | -- | 127 |
-| Grand Total | -- | 241 | Fall Hours: 241; Spring Hours: 127; Total Hours: 368 | 368 |
+| 1/8 | Presented Prototype of project at CES 2023 | 40 | -- | 0 |
+| 1/15 | Updated GPS tracking system with notecard | 3 | -- | 0 |
+| 1/22 | Enabled remote firmware updates with notecard | 4 | -- | 0 |
+| 1/29 | Tested full functionality of prototype using OBD to USB adapte | 3 | -- | 0 |
+| 2/5 | Updated Casing model for larger connection sizes | 4 | -- | 0 |
+| 2/12 | Tested improved mobile dashboard using Losant user experiences | 5 | -- | 0 |
+| 2/19 | Created custom 3D visualization components using D3 | 3 | -- | 0 |
+| 2/26 | Updated python script on raspberry pi to read any incoming OBD readings regardless of connection type | 8 | -- | 0 |
+| 3/5 | Tested updated Notecard and raspberry pi settings using Losant simulator | 5 | -- | 0 |
+| 3/12 | Recorded demo videos for CEAS Expo | 5 | -- | 0 |
+| 3/19 | Printed updated casing, installed casing on in-car display | 3 | -- | 0 |
+| 3/26 | Prepared presentation materials for CEAS Expo | 12 | -- | 0 |
+| 4/2 | Presented final project at CEAS Expo | 12 | -- | 0 |
+| 4/9 | Drafted final assessments and final design report | 10 | -- | 0 |
+| 4/16| Completed final assessments and design report, submitted all materials | 5 | -- | 0 |
+| Spring Total | -- | 127 | -- | 241 |
+| Grand Total | Fall Hours: 241; Spring Hours: 127; Total Hours: 368 | 368 | -- | 0 |
