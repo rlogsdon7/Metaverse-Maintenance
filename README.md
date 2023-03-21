@@ -33,7 +33,7 @@ This project is a data collection and analysis tool for consumer and commercial 
 
 ## Final Slideshow Presentation
 - [Slide Show](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Project%20Presentation.pdf)
-- [Expo Poster](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Senior%20Design%20Poster.pdf)
+- [Expo Poster](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Final%20Senior%20Design%20Poster.pdf)
 
 ## Self-Assessment Essays
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Ryan%20Logsdon.pdf)
