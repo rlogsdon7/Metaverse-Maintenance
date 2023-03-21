@@ -40,8 +40,12 @@ This project is a data collection and analysis tool for consumer and commercial 
 - [Expo Poster](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Final%20Senior%20Design%20Poster.pdf)
 
 ## Self-Assessment Essays
+Initial:
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Ryan%20Logsdon.pdf)
 - [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Self%20Assessment%20Essay%20--%20Cory%20Gish.pdf)
+Final:
+- [Ryan Logsdon](
+- [Cory Gish](
 
 ## Professional Biographies
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
