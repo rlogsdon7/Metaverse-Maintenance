@@ -8,6 +8,9 @@
 
 - David Mackenzie | dmackenzie@ite.com
 
+## Final Design Report
+- [Final Design Report]()
+
 ## Project Abstract
 This project is a data collection and analysis tool for consumer and commercial automotive vehicles. Users for this device include mechanics, fleet managers, data analysts, and conventional drivers.  The system will allow users to view, analyze, and improve vehicle performance through a multi-platform analysis tool including in-vehicle display, web application, and a virtual reality environment. 
 
