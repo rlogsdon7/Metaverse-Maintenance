@@ -1,5 +1,6 @@
 <html>
 <head>
+    <link rel="icon" href="https://meta-maintenance.w3spaces.com/Icon.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,6 +15,7 @@
 
     <script>
         //Create lists and arrays to store node values
+        var access = ""
         var uuids = [];
         var nodeList = {};
         var linkList = {};
@@ -918,12 +920,19 @@
                             for (var i = 0; i < result.length; i++){
                                 if(result[i].Username == usernameEntered){
                                     thisPassword = result[i].Password
+                                    access = result[i].Access
                                 }
                             }
                             if(password == thisPassword){
+                                if(access == 2){
+                                    document.getElementById('fleetButton').style.display = "flex";
+                                }
+                                else{
+                                    document.getElementById('fleetButton').style.display = "none";
+                                }
+                                document.getElementById('adminRow').style.display = "flex";
                                 document.getElementById('errorPass').style.display = "none";
                                 document.getElementById('loginRow').style.display = "none";
-                                document.getElementById('adminRow').style.display = "flex";
                                 document.getElementById('signUp').style.display = "none";
                                 document.getElementById('register').style.display = "none";
                                 user = usernameEntered;
@@ -1039,7 +1048,11 @@
                         }
                     }
                     if(unique){
-                        createUserinLosant(usernameEntered,password,email);
+                        var access = "1";
+                        if(document.getElementById('fleetCheckbox').checked){
+                            access = "2";    
+                        }
+                        createUserinLosant(usernameEntered,password,email,access);
                     } 
                 }).catch(err=>console.log(err))
             } 
@@ -1047,8 +1060,8 @@
             }
         }
 
-        async function createUserinLosant(usernameEntered,password,email){
-            var webhookResponse = createUserLosant(usernameEntered,password,email);
+        async function createUserinLosant(usernameEntered,password,email,access){
+            var webhookResponse = createUserLosant(usernameEntered,password,email,access);
                 webhookResponse.then(async function(result) {
                     backToLogin()
                     eventMessage("User created.")
@@ -1113,11 +1126,18 @@
                 eventsMessageElement2.innerHTML = "";
                 eventsMessageElement3.innerHTML = "";
                 document.getElementById('loginRow').style.display = "none";
+                if(access == 2){
+                    document.getElementById('fleetButton').style.display = "flex";
+                }
+                else{
+                    document.getElementById('fleetButton').style.display = "none";
+                }
                 document.getElementById('adminRow').style.display = "flex";
                 document.getElementById('signUp').style.display = "none";
                 document.getElementById('register').style.display = "none";
                 document.getElementById('realTime').style.display = "none";
                 document.getElementById('historicalTime').style.display = "none";
+                document.getElementById('bigMap').style.display = "none";
                 document.getElementById('deviceID').value = ""
             } 
             catch (error) {
@@ -1262,6 +1282,24 @@
             }
         }
 
+        async function displayFleet() {
+            try {
+                eventsMessageElement0.innerHTML = "";
+                eventsMessageElement1.innerHTML = "";
+                eventsMessageElement2.innerHTML = "";
+                eventsMessageElement3.innerHTML = "";
+                document.getElementById('loginRow').style.display = "none";
+                document.getElementById('adminRow').style.display = "none";
+                document.getElementById('signUp').style.display = "none";
+                document.getElementById('register').style.display = "none";
+                document.getElementById('realTime').style.display = "none";
+                document.getElementById('historicalTime').style.display = "none";
+                document.getElementById('bigMap').style.display = "flex";
+            } 
+            catch (error) {
+            }
+        }
+
         function validateEmail(inputText)
         {
             var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -1377,6 +1415,9 @@
                 <p>
                     <label for="confirmPasswordCreate">Confirm Password:</label> <input id="confirmPasswordCreate" type="text" size="30"/>
                 </p>
+                <p>
+                    <label for="fleetCheckbox">Fleet Manager? </label> <input id="fleetCheckbox" type="checkbox" size="30"/>
+                </p>
                 <!-- Map interaction buttons -->
                 <p>
                     <input type="button" value="Back" onclick="backToLogin()" />
@@ -1491,6 +1532,9 @@
                 <p>
                     <input id="RealButton" type="button" value="Real Time Overview" onclick="displayReal()" /> 
                     <input id="HistoricalButton" type="button" value="Historical Overview" onclick="displayHistorical()" /> 
+                  </p>
+                <p>  
+                    <input id="fleetButton" type="button" value="View Fleet" onclick="displayFleet()" /> 
                 </p>
                 <p>    
                     <!--<input type="button" value="Import Model" onclick="importMap()" />
@@ -1564,6 +1608,33 @@
                 fjs.parentNode.insertBefore(js, fjs); t._e = [];
                 t.ready = function(f) { t._e.push(f); }; return t;
                 }(document, "script", "lsnt-widgets"));</script>
+                <p>
+                    <input type="button" value="Back" onclick="backToAdmin()" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- bigMap -->
+    <div class="row" id="bigMap" style="display: none;">
+        <div class="col-12" style="height: 1000px">
+            <div class="crud-form link-form" style="height: 1000px">
+                <h2 id="histDashTitle">Fleet Map</h2>
+                <a class="los-widget"
+                    href="https://app.losant.com/dashboards/63c064df412b132160b24e86"
+                    data-dashboard-id="63c064df412b132160b24e86"
+                    data-theme="light"
+                    data-height="847px" data-width="100%"
+                    data-refresh-rate="60">
+                    View my Losant-powered dashboard "GPS Map"
+                    </a>
+                    <script>window.lsnt = (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0], t = window.lsnt || {};
+                    if (d.getElementById(id)) return t;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "https://app.losant.com/scripts/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs); t._e = [];
+                    t.ready = function(f) { t._e.push(f); }; return t;
+                    }(document, "script", "lsnt-widgets"));</script>
                 <p>
                     <input type="button" value="Back" onclick="backToAdmin()" />
                 </p>
