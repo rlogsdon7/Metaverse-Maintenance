@@ -66,8 +66,8 @@ function getUser() {
 }
 
 //create User
-function createUserLosant(username,password,email) {
-    return fetch('https://triggers.losant.com/webhooks/40KN4NwZrGjRdL6XyC2WCCkbWnjzD9ot4c3Yz7nI/user?username='+username+'&password='+password+'&email='+email)
+function createUserLosant(username,password,email,access) {
+    return fetch('https://triggers.losant.com/webhooks/40KN4NwZrGjRdL6XyC2WCCkbWnjzD9ot4c3Yz7nI/user?username='+username+'&password='+password+'&email='+email+'&access='+access)
    .then(function(response) {
     return response.json();
   })
