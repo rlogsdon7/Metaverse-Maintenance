@@ -38,4 +38,4 @@
 | 4/9 | Drafted final assessments and final design report | 10 | Created a draft of final assessments and design report | 10 |
 | 4/16| Completed final assessments and design report, submitted all materials | 5 | Completed final assessments and design report | 5 |
 | Spring Total | -- | 127 | -- | 113 |
-| Grand Total | Fall Hours: 241; Spring Hours: 127; Total Hours: 368 | 368 | -- | 0 |
+| Grand Total | Fall Hours: 241; Spring Hours: 127; Total Hours: 368 | 368 | Fall Hours: 236; Spring Hours: 113; Total Hours: 349 | 349 |
