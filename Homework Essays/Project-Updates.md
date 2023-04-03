@@ -18,24 +18,24 @@
 | 11/27 | Update Noda vehicle node point maps |10| Continued making the layout and finding parts for the 3D model. | 8 |
 | 12/4 |Tested user-login verification features with Losant data tables |12| Continued making the layout and debugging messaging structures for car communication in C++. | 10 |
 | Fall Total | -- | 241 | -- | 236 |
-| 12/11 | Created Casing Model | 5 | -- | 0 |
-| 12/18 | Printed Casing Model | 5 | -- | 0 |
+| 12/11 | Created Casing Model | 5 | Finished getting 3D models for layout and continued working on layout | 5 |
+| 12/18 | Printed Casing Model | 5 | Began to rework schematic | 6 |
 | 12/25 | -- | 0 | -- | 0 |
 | 1/1 | -- | 0 | -- | 0 |
-| 1/8 | Presented Prototype of project at CES 2023 | 40 | -- | 0 |
-| 1/15 | Updated GPS tracking system with notecard | 3 | -- | 0 |
-| 1/22 | Enabled remote firmware updates with notecard | 4 | -- | 0 |
-| 1/29 | Tested full functionality of prototype using OBD to USB adapte | 3 | -- | 0 |
-| 2/5 | Updated Casing model for larger connection sizes | 4 | -- | 0 |
-| 2/12 | Tested improved mobile dashboard using Losant user experiences | 5 | -- | 0 |
-| 2/19 | Created custom 3D visualization components using D3 | 3 | -- | 0 |
-| 2/26 | Updated python script on raspberry pi to read any incoming OBD readings regardless of connection type | 8 | -- | 0 |
-| 3/5 | Tested updated Notecard and raspberry pi settings using Losant simulator | 5 | -- | 0 |
-| 3/12 | Recorded demo videos for CEAS Expo | 5 | -- | 0 |
-| 3/19 | Printed updated casing, installed casing on in-car display | 3 | -- | 0 |
-| 3/26 | Prepared presentation materials for CEAS Expo | 12 | -- | 0 |
-| 4/2 | Presented final project at CEAS Expo | 12 | -- | 0 |
-| 4/9 | Drafted final assessments and final design report | 10 | -- | 0 |
-| 4/16| Completed final assessments and design report, submitted all materials | 5 | -- | 0 |
-| Spring Total | -- | 127 | -- | 0 |
+| 1/8 | Presented Prototype of project at CES 2023 | 40 | Researched more into OBD communication protocol ICs and found the STN1110 | 8 |
+| 1/15 | Updated GPS tracking system with notecard | 3 | Ordered kit with STN1110 for OBD communication | 4 |
+| 1/22 | Enabled remote firmware updates with notecard | 4 | Tested with successful communication between the car and microcontroller using the STN1110 | 6 |
+| 1/29 | Tested full functionality of prototype using OBD to USB adapte | 3 | Reworked schematic with STN1110  | 4 |
+| 2/5 | Updated Casing model for larger connection sizes | 4 | Continued Bluetooth testing with RN-42 | 3 |
+| 2/12 | Tested improved mobile dashboard using Losant user experiences | 5 | Tested with successful communication between RN-42 and phone | 4 |
+| 2/19 | Created custom 3D visualization components using D3 | 3 | Adjusted Bluetooth design in the schematic | 7 |
+| 2/26 | Updated python script on raspberry pi to read any incoming OBD readings regardless of connection type | 8 | Tested with successful communication between car and phone through microcontroller, STN1110, and Bluetooth | 6 |
+| 3/5 | Tested updated Notecard and raspberry pi settings using Losant simulator | 5 | Reworked the schematic from parts getting out of stock | 4 |
+| 3/12 | Recorded demo videos for CEAS Expo | 5 | Finalized the schematic and worked on 2nd layout version | 9 |
+| 3/19 | Printed updated casing, installed casing on in-car display | 3 | Finalized layout and ordered parts for final OBD board | 8 |
+| 3/26 | Prepared presentation materials for CEAS Expo | 12 | Prepared presentation materials for CEAS Expo and soldered the final OBD board | 12 |
+| 4/2 | Presented final project at CEAS Expo | 12 | Presented final project at CEAS Expo | 12 |
+| 4/9 | Drafted final assessments and final design report | 10 | Created a draft of final assessments and design report | 10 |
+| 4/16| Completed final assessments and design report, submitted all materials | 5 | Completed final assessments and design report | 5 |
+| Spring Total | -- | 127 | -- | 113 |
 | Grand Total | Fall Hours: 241; Spring Hours: 127; Total Hours: 368 | 368 | -- | 0 |
