@@ -46,7 +46,7 @@ Initial:
 
 Final:
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Final%20Self-Assessment_Ryan%20Logsdon.pdf)
-- [Cory Gish](
+- [Cory Gish](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Final%20Self-Assessment_Cory%20Gish.pdf)
 
 ## Professional Biographies
 - [Ryan Logsdon](https://github.com/rlogsdon7/Metaverse-Maintenance/blob/main/Homework%20Essays/Ryan%20Logsdon%20-%20Professional%20Biography.docx)
